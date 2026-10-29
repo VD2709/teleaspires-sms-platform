@@ -1,0 +1,2277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="./Tele_Aspires_Broadcast_Logo.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="TeleAspiresPvtLTD - Next-Gen A2P SMS Platform. Boost your business communication with powerful SMS automation, analytics & global reach. 98.9% delivery rate, 3M+ messages/day." />
+  <meta name="keywords" content="A2P SMS, SMS platform, SMS API, WhatsApp Business, voice broadcasting, bulk SMS, enterprise messaging" />
+  <meta property="og:title" content="TeleAspiresPvtLTD - Next-Gen A2P SMS Platform" />
+  <meta property="og:description" content="Boost your business communication with powerful SMS automation, analytics & global reach." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="./og-image.jpg" />
+  <title>TeleAspiresPvtLTD - Next-Gen A2P SMS Platform</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              50: '#effaff',
+              100: '#dff6ff',
+              200: '#b9edff',
+              300: '#7ddfff',
+              400: '#38c9f5',
+              500: '#0ea5d8',
+              600: '#0786ba',
+              700: '#08709d',
+              800: '#0b5b7d',
+              900: '#104b68',
+              950: '#0b3147',
+            },
+            accent: {
+              50: '#f0fcff',
+              100: '#d9f8ff',
+              200: '#b6efff',
+              300: '#78e1f8',
+              400: '#32c6e4',
+              500: '#06a6c7',
+              600: '#0787a5',
+              700: '#0b6c86',
+              800: '#10586d',
+              900: '#12495a',
+              950: '#0b303b',
+            },
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            display: ['Space Grotesk', 'Inter', 'sans-serif'],
+          },
+          animation: {
+            'fade-up': 'fadeUp 0.7s ease-out forwards',
+            'fade-in': 'fadeIn 0.7s ease-out forwards',
+            'marquee': 'marquee 40s linear infinite',
+            'float': 'float 6s ease-in-out infinite',
+          },
+          keyframes: {
+            fadeUp: {
+              '0%': { opacity: '0', transform: 'translateY(30px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            },
+            fadeIn: {
+              '0%': { opacity: '0' },
+              '100%': { opacity: '1' },
+            },
+            marquee: {
+              '0%': { transform: 'translateX(0)' },
+              '100%': { transform: 'translateX(-50%)' },
+            },
+            float: {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-15px)' },
+            },
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 5rem;
+    }
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background-color: #f8fafc;
+      color: #1e293b;
+      overflow-x: hidden;
+    }
+    ::selection {
+      background-color: #b9edff;
+      color: #0b5b7d;
+    }
+    .text-gradient {
+      background: linear-gradient(135deg, #0ea5d8 0%, #06a6c7 50%, #0786ba 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .bg-grid {
+      background-image:
+        linear-gradient(to right, rgba(14,165,216,0.07) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(14,165,216,0.07) 1px, transparent 1px);
+      background-size: 56px 56px;
+    }
+    .bg-radial-glow {
+      background: radial-gradient(ellipse 80% 60% at 50% -20%, rgba(14,165,216,0.12), transparent 70%);
+    }
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .marquee-track {
+      display: flex;
+      width: max-content;
+      will-change: transform;
+    }
+    .marquee-testimonials {
+      animation: marquee-scroll 45s linear infinite;
+    }
+    .marquee-partners {
+      animation: marquee-scroll 32s linear infinite;
+    }
+    .marquee-track:hover {
+      animation-play-state: paused;
+    }
+    @keyframes marquee-scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .reveal { opacity: 1; transform: none; transition: none; }
+      .marquee-testimonials { animation: marquee-scroll 70s linear infinite; }
+      .marquee-partners { animation: marquee-scroll 50s linear infinite; }
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-slate-50 text-slate-800 antialiased">
+
+  <!-- ==================== NAVBAR ==================== -->
+  <header id="navbar" class="fixed top-0 inset-x-0 z-50 transition-all duration-300 bg-white/80 backdrop-blur-sm border-b border-slate-100">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 lg:h-20">
+        <!-- Logo -->
+        <a href="#" class="flex items-center group">
+          <img
+            src="./Tele_Aspires_Broadcast_Logo.png"
+            alt="TeleAspiresPvtLTD"
+            class="h-12 w-auto max-w-[200px] object-contain group-hover:opacity-90 transition-opacity"
+            onerror="this.onerror=null; this.src='./public/Tele_Aspires_Broadcast_Logo.png';"
+          />
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <div class="hidden md:flex items-center gap-1">
+          <a href="#features" class="nav-link px-4 py-2 text-sm font-medium text-slate-600 hover:text-primary-600 hover:bg-primary-50 rounded-lg transition-colors">Features</a>
+          <a href="#services" class="nav-link px-4 py-2 text-sm font-medium text-slate-600 hover:text-primary-600 hover:bg-primary-50 rounded-lg transition-colors">Services</a>
+          <a href="#testimonials" class="nav-link px-4 py-2 text-sm font-medium text-slate-600 hover:text-primary-600 hover:bg-primary-50 rounded-lg transition-colors">Testimonials</a>
+          <a href="#faq" class="nav-link px-4 py-2 text-sm font-medium text-slate-600 hover:text-primary-600 hover:bg-primary-50 rounded-lg transition-colors">FAQ</a>
+          <button onclick="openQuoteModal()" class="px-3.5 py-1.5 text-xs font-semibold text-primary-700 bg-primary-50 hover:bg-primary-100 border border-primary-200 rounded-lg transition-colors">Get a Quote</button>
+        </div>
+
+        <!-- Desktop Action Buttons -->
+        <div class="hidden md:flex items-center gap-3" id="authSection">
+          <button
+            onclick="openAuth('signin')"
+            class="px-4 py-2 text-sm font-semibold text-slate-700 hover:text-primary-600 hover:bg-primary-50 rounded-xl transition-all"
+          >
+            Sign In
+          </button>
+          <button
+            onclick="openAuth('signup')"
+            class="px-5 py-2.5 text-sm font-semibold text-white bg-gradient-to-r from-primary-500 to-accent-500 rounded-xl hover:shadow-lg hover:shadow-primary-500/25 hover:scale-[1.02] transition-all"
+          >
+            Get Started Free
+          </button>
+        </div>
+
+        <!-- Mobile Menu Toggle Button -->
+        <div class="flex md:hidden">
+          <button
+            id="mobileMenuBtn"
+            onclick="toggleMobileMenu()"
+            class="p-2 rounded-xl text-slate-600 hover:text-primary-600 hover:bg-primary-50 transition-colors"
+            aria-label="Toggle navigation"
+          >
+            <svg id="hamburgerIcon" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <svg id="closeIcon" class="w-6 h-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Mobile Drawer -->
+    <div id="mobileMenu" class="hidden md:hidden border-b border-slate-200 bg-white/95 backdrop-blur-xl px-4 pt-2 pb-6 space-y-3">
+      <div class="flex flex-col space-y-1">
+        <a href="#features" onclick="toggleMobileMenu()" class="px-4 py-2.5 text-base font-medium text-slate-700 hover:bg-primary-50 rounded-xl">Features</a>
+        <a href="#services" onclick="toggleMobileMenu()" class="px-4 py-2.5 text-base font-medium text-slate-700 hover:bg-primary-50 rounded-xl">Services</a>
+        <a href="#testimonials" onclick="toggleMobileMenu()" class="px-4 py-2.5 text-base font-medium text-slate-700 hover:bg-primary-50 rounded-xl">Testimonials</a>
+        <a href="#faq" onclick="toggleMobileMenu()" class="px-4 py-2.5 text-base font-medium text-slate-700 hover:bg-primary-50 rounded-xl">FAQ</a>
+        <button onclick="toggleMobileMenu(); openQuoteModal();" class="text-left px-4 py-2.5 text-base font-medium text-primary-600 hover:bg-primary-50 rounded-xl">Request a Quote</button>
+      </div>
+      <div class="pt-3 border-t border-slate-100 flex flex-col gap-2">
+        <button
+          onclick="toggleMobileMenu(); openAuth('signin');"
+          class="w-full py-2.5 text-center text-sm font-semibold text-slate-700 bg-slate-100 hover:bg-slate-200 rounded-xl transition-colors"
+        >
+          Sign In
+        </button>
+        <button
+          onclick="toggleMobileMenu(); openAuth('signup');"
+          class="w-full py-2.5 text-center text-sm font-semibold text-white bg-gradient-to-r from-primary-500 to-accent-500 rounded-xl shadow-md transition-all"
+        >
+          Get Started Free
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="relative min-h-screen flex items-center overflow-hidden pt-24 pb-16 bg-gradient-to-br from-white via-primary-50 to-accent-50">
+      <div class="absolute inset-0 bg-grid opacity-60"></div>
+      <div class="absolute top-1/4 -left-32 w-96 h-96 bg-primary-300/30 rounded-full blur-[120px] animate-pulse"></div>
+      <div class="absolute bottom-1/4 -right-32 w-96 h-96 bg-accent-300/30 rounded-full blur-[120px] animate-pulse" style="animation-delay: 1.5s;"></div>
+
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <!-- Left: Hero Text -->
+          <div class="text-center lg:text-left">
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-primary-200 shadow-sm text-sm text-slate-600 mb-6 animate-fade-in">
+              <span class="relative flex h-2 w-2">
+                <span class="absolute inline-flex h-full w-full rounded-full bg-accent-400 opacity-75 animate-ping"></span>
+                <span class="relative inline-flex rounded-full h-2 w-2 bg-accent-500"></span>
+              </span>
+              Trusted by 10,000+ businesses worldwide
+            </div>
+
+            <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 leading-[1.1] tracking-tight mb-6 animate-fade-up">
+              Next-Gen <br class="hidden sm:inline" />
+              <span class="text-gradient">A2P SMS</span>
+              Platform
+            </h1>
+
+            <p class="text-lg text-slate-500 max-w-xl mx-auto lg:mx-0 mb-8 leading-relaxed animate-fade-up" style="animation-delay: 0.1s;">
+              Boost your business communication with powerful SMS automation, analytics & global reach. Lightning-fast delivery with enterprise-grade security.
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-up" style="animation-delay: 0.2s;">
+              <button
+                onclick="openAuth('signup')"
+                class="group inline-flex items-center justify-center gap-2 px-7 py-3.5 text-base font-semibold text-white bg-gradient-to-r from-primary-500 to-accent-500 rounded-xl hover:shadow-xl hover:shadow-primary-500/30 hover:scale-[1.02] transition-all"
+              >
+                Start Sending SMS
+                <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </button>
+              <a
+                href="#features"
+                class="inline-flex items-center justify-center gap-2 px-7 py-3.5 text-base font-semibold text-slate-700 bg-white border border-slate-200 rounded-xl hover:border-primary-300 hover:bg-primary-50 transition-all shadow-sm"
+              >
+                Explore Features
+              </a>
+            </div>
+          </div>
+
+          <!-- Right: 3D-Style Hero Smartphone Mockup -->
+          <div class="hidden lg:flex justify-center items-center relative">
+            <div class="relative w-[420px] h-[600px]">
+              <div class="absolute inset-0 rounded-[2.5rem] bg-gradient-to-br from-primary-400/30 via-accent-400/20 to-transparent blur-3xl scale-110"></div>
+
+              <div class="relative w-full h-full rounded-[2.5rem] overflow-hidden ring-1 ring-primary-100 shadow-2xl shadow-primary-200/50 animate-float bg-slate-950">
+                <img
+                  src="https://images.pexels.com/photos/19582404/pexels-photo-19582404.jpeg?auto=compress&cs=tinysrgb&w=800"
+                  alt="SMS Platform Interface"
+                  class="w-full h-full object-cover opacity-85"
+                  loading="eager"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-primary-950 via-primary-900/40 to-transparent"></div>
+                <div class="absolute inset-0 bg-gradient-to-r from-primary-950/50 to-transparent"></div>
+
+                <!-- Phone Status Bar -->
+                <div class="absolute top-0 inset-x-0 flex items-center justify-between px-6 pt-4 text-white/90 text-xs font-medium z-10">
+                  <span>10:45</span>
+                  <div class="flex items-center gap-1.5">
+                    <!-- Signal -->
+                    <svg viewBox="0 0 18 12" class="w-4 h-3 text-white/80" fill="currentColor">
+                      <rect x="0" y="8" width="3" height="4" rx="1" />
+                      <rect x="5" y="5" width="3" height="7" rx="1" />
+                      <rect x="10" y="2" width="3" height="10" rx="1" />
+                      <rect x="15" y="0" width="3" height="12" rx="1" opacity="0.5" />
+                    </svg>
+                    <!-- Wifi -->
+                    <svg viewBox="0 0 16 12" class="w-4 h-3 text-white/80" fill="currentColor">
+                      <path d="M8 2C5.2 2 2.7 3 .8 4.6L0 3.7C2.1 1.9 4.9.8 8 .8s5.9 1.1 8 2.9l-.8.9C13.3 3 10.8 2 8 2Z" />
+                      <path d="M8 5.5C6.3 5.5 4.8 6.1 3.6 7.1l-.8-.9C4.2 5.1 6 4.4 8 4.4s3.8.7 5.2 1.8l-.8.9C11.2 6.1 9.7 5.5 8 5.5Z" />
+                      <circle cx="8" cy="9.5" r="1.5" />
+                    </svg>
+                    <!-- Battery -->
+                    <div class="flex items-center gap-0.5">
+                      <div class="relative w-6 h-3 rounded-[3px] border border-white/50 p-0.5">
+                        <div class="h-full w-[80%] rounded-[1px] bg-white/80"></div>
+                      </div>
+                      <div class="w-0.5 h-1.5 rounded-r bg-white/50"></div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Phone Mockup Overlay -->
+                <div class="absolute bottom-0 left-0 right-0 p-5 space-y-3">
+                  <div class="flex items-center justify-between mb-1">
+                    <div class="flex items-center gap-2">
+                      <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center">
+                        <svg class="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                        </svg>
+                      </div>
+                      <div>
+                        <p class="text-white text-sm font-semibold leading-tight">TeleAspiresPvtLTD</p>
+                        <p class="text-white/50 text-[10px] leading-tight">Campaign Dashboard</p>
+                      </div>
+                    </div>
+                    <div class="flex items-center gap-1.5">
+                      <div class="w-2 h-2 rounded-full bg-accent-400 animate-pulse"></div>
+                      <span class="text-[10px] text-white/60">Live</span>
+                    </div>
+                  </div>
+
+                  <!-- Stat Pills -->
+                  <div class="flex items-center gap-2 mb-2">
+                    <div class="flex items-center gap-2 rounded-lg bg-white/[0.12] backdrop-blur-sm px-2.5 py-1.5">
+                      <svg class="w-3.5 h-3.5 text-accent-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" /></svg>
+                      <div>
+                        <p class="text-[10px] text-white/60 leading-tight">Delivery</p>
+                        <p class="text-[11px] text-white font-semibold leading-tight">98.9%</p>
+                      </div>
+                    </div>
+                    <div class="flex items-center gap-2 rounded-lg bg-white/[0.12] backdrop-blur-sm px-2.5 py-1.5">
+                      <svg class="w-3.5 h-3.5 text-primary-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" /></svg>
+                      <div>
+                        <p class="text-[10px] text-white/60 leading-tight">Reach</p>
+                        <p class="text-[11px] text-white font-semibold leading-tight">200+</p>
+                      </div>
+                    </div>
+                    <div class="flex items-center gap-2 rounded-lg bg-white/[0.12] backdrop-blur-sm px-2.5 py-1.5">
+                      <svg class="w-3.5 h-3.5 text-accent-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+                      <div>
+                        <p class="text-[10px] text-white/60 leading-tight">Speed</p>
+                        <p class="text-[11px] text-white font-semibold leading-tight">5s</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Live Chat Bubbles -->
+                  <div class="space-y-2 max-h-[220px] overflow-hidden">
+                    <div class="flex justify-end">
+                      <div class="max-w-[80%] rounded-2xl rounded-br-md px-3.5 py-2.5 bg-gradient-to-br from-primary-600 to-primary-700 shadow-md">
+                        <p class="text-white text-[11px] leading-snug">Your OTP is 482913. Valid for 5 minutes.</p>
+                        <div class="flex items-center gap-1 mt-0.5 justify-end">
+                          <span class="text-[8px] text-white/60">10:42 AM</span>
+                          <svg class="w-2.5 h-2.5 text-accent-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" /></svg>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="flex justify-end">
+                      <div class="max-w-[80%] rounded-2xl rounded-br-md px-3.5 py-2.5 bg-gradient-to-br from-primary-600 to-primary-700 shadow-md">
+                        <p class="text-white text-[11px] leading-snug">Order #A2391 shipped! Track: bit.ly/track-2391</p>
+                        <div class="flex items-center gap-1 mt-0.5 justify-end">
+                          <span class="text-[8px] text-white/60">10:43 AM</span>
+                          <svg class="w-2.5 h-2.5 text-accent-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" /></svg>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="flex justify-end">
+                      <div class="max-w-[80%] rounded-2xl rounded-br-md px-3.5 py-2.5 bg-gradient-to-br from-primary-600 to-primary-700 shadow-md">
+                        <p class="text-white text-[11px] leading-snug">Flash Sale! 50% off all plans today only.</p>
+                        <div class="flex items-center gap-1 mt-0.5 justify-end">
+                          <span class="text-[8px] text-white/60">10:44 AM</span>
+                          <svg class="w-2.5 h-2.5 text-accent-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" /></svg>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Typing Indicator Bubble -->
+                    <div class="flex justify-start">
+                      <div class="bg-white/[0.15] backdrop-blur-md rounded-2xl rounded-bl-md px-3.5 py-2 flex items-center gap-1.5">
+                        <span class="w-1.5 h-1.5 rounded-full bg-white/70 animate-bounce" style="animation-delay: 0s;"></span>
+                        <span class="w-1.5 h-1.5 rounded-full bg-white/70 animate-bounce" style="animation-delay: 0.15s;"></span>
+                        <span class="w-1.5 h-1.5 rounded-full bg-white/70 animate-bounce" style="animation-delay: 0.3s;"></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== STATS COUNTER SECTION ==================== -->
+    <section id="statsSection" class="relative -mt-px border-y border-slate-200 bg-white">
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-2 lg:grid-cols-4 divide-x divide-y lg:divide-y-0 divide-slate-200">
+          <div class="group py-10 lg:py-14 text-center px-4 relative transition-all duration-300 hover:bg-primary-50">
+            <p class="font-display text-3xl lg:text-5xl font-bold text-gradient mb-2 transition-transform duration-300 group-hover:scale-110 stat-counter" data-target="98.9" data-decimals="1" data-suffix="%">
+              98.9%
+            </p>
+            <p class="text-sm lg:text-base text-slate-500 font-medium">Delivery Rate</p>
+            <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 group-hover:w-12 h-0.5 bg-gradient-to-r from-primary-500 to-accent-500 transition-all duration-300 rounded-full"></div>
+          </div>
+
+          <div class="group py-10 lg:py-14 text-center px-4 relative transition-all duration-300 hover:bg-primary-50">
+            <p class="font-display text-3xl lg:text-5xl font-bold text-gradient mb-2 transition-transform duration-300 group-hover:scale-110 stat-counter" data-target="3" data-decimals="0" data-suffix="M+">
+              3M+
+            </p>
+            <p class="text-sm lg:text-base text-slate-500 font-medium">Messages / Day</p>
+            <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 group-hover:w-12 h-0.5 bg-gradient-to-r from-primary-500 to-accent-500 transition-all duration-300 rounded-full"></div>
+          </div>
+
+          <div class="group py-10 lg:py-14 text-center px-4 relative transition-all duration-300 hover:bg-primary-50">
+            <p class="font-display text-3xl lg:text-5xl font-bold text-gradient mb-2 transition-transform duration-300 group-hover:scale-110">
+              24/7
+            </p>
+            <p class="text-sm lg:text-base text-slate-500 font-medium">Support</p>
+            <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 group-hover:w-12 h-0.5 bg-gradient-to-r from-primary-500 to-accent-500 transition-all duration-300 rounded-full"></div>
+          </div>
+
+          <div class="group py-10 lg:py-14 text-center px-4 relative transition-all duration-300 hover:bg-primary-50">
+            <p class="font-display text-3xl lg:text-5xl font-bold text-gradient mb-2 transition-transform duration-300 group-hover:scale-110 stat-counter" data-target="200" data-decimals="0" data-suffix="+">
+              200+
+            </p>
+            <p class="text-sm lg:text-base text-slate-500 font-medium">Countries</p>
+            <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 group-hover:w-12 h-0.5 bg-gradient-to-r from-primary-500 to-accent-500 transition-all duration-300 rounded-full"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== LIVE SMS SAMPLES & COMPOSER ==================== -->
+    <section class="relative py-20 lg:py-28 overflow-hidden bg-slate-50">
+      <div class="absolute inset-0 bg-radial-glow opacity-50"></div>
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <!-- Left: Sample Cards -->
+          <div class="reveal space-y-4">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-100 border border-primary-200 mb-2">
+              <span class="relative flex h-2 w-2">
+                <span class="absolute inline-flex h-full w-full rounded-full bg-primary-400 opacity-75 animate-ping"></span>
+                <span class="relative inline-flex rounded-full h-2 w-2 bg-primary-500"></span>
+              </span>
+              <p class="text-sm font-semibold text-primary-600 uppercase tracking-wider">Live SMS Samples</p>
+            </div>
+
+            <h3 class="font-display text-2xl sm:text-3xl font-bold text-slate-900 mb-2">
+              Real messages, <span class="text-gradient">real delivery</span>
+            </h3>
+            <p class="text-slate-500 text-sm mb-6 max-w-md">
+              See how businesses use TeleAspiresPvtLTD for OTPs, alerts, and promotions — delivered instantly worldwide.
+            </p>
+
+            <div class="group bg-white border border-slate-200 rounded-2xl p-4 hover:border-primary-300 hover:shadow-md transition-all duration-300 hover:translate-x-1 cursor-pointer" onclick="setComposerMessage('Snapchat Code: 945065. Happy Snapping!')">
+              <div class="flex items-start gap-3">
+                <div class="flex-shrink-0 px-2 py-0.5 rounded-md border text-[10px] font-bold tracking-wider bg-primary-100 text-primary-700 border-primary-200">
+                  OTP
+                </div>
+                <div class="flex-1 min-w-0">
+                  <p class="text-slate-700 text-sm leading-relaxed">&lt;#&gt; Snapchat Code: 945065. Happy Snapping!</p>
+                  <div class="flex items-center gap-2 mt-2">
+                    <span class="text-[10px] text-slate-400 font-medium">SMSG-1337</span>
+                    <span class="text-[10px] text-slate-300">·</span>
+                    <span class="text-[10px] text-accent-600 flex items-center gap-1 font-medium">
+                      <span class="w-1.5 h-1.5 rounded-full bg-accent-500"></span>
+                      Delivered
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="group bg-white border border-slate-200 rounded-2xl p-4 hover:border-primary-300 hover:shadow-md transition-all duration-300 hover:translate-x-1 cursor-pointer" onclick="setComposerMessage('Dear Customer (PNR: BE-TELE): Delayed Due to schedule change, Jet flight')">
+              <div class="flex items-start gap-3">
+                <div class="flex-shrink-0 px-2 py-0.5 rounded-md border text-[10px] font-bold tracking-wider bg-accent-100 text-accent-700 border-accent-200">
+                  ALERT
+                </div>
+                <div class="flex-1 min-w-0">
+                  <p class="text-slate-700 text-sm leading-relaxed">Dear Customer (PNR: BE-TELE): Delayed Due to schedule change, Jet flight</p>
+                  <div class="flex items-center gap-2 mt-2">
+                    <span class="text-[10px] text-slate-400 font-medium">JET-INFO</span>
+                    <span class="text-[10px] text-slate-300">·</span>
+                    <span class="text-[10px] text-accent-600 flex items-center gap-1 font-medium">
+                      <span class="w-1.5 h-1.5 rounded-full bg-accent-500"></span>
+                      Delivered
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="group bg-white border border-slate-200 rounded-2xl p-4 hover:border-primary-300 hover:shadow-md transition-all duration-300 hover:translate-x-1 cursor-pointer" onclick="setComposerMessage('BrandName: Get $200 Bonus, Next BIG WIN: https://teleaspires.com/offer')">
+              <div class="flex items-start gap-3">
+                <div class="flex-shrink-0 px-2 py-0.5 rounded-md border text-[10px] font-bold tracking-wider bg-primary-100 text-primary-600 border-primary-200">
+                  PROMO
+                </div>
+                <div class="flex-1 min-w-0">
+                  <p class="text-slate-700 text-sm leading-relaxed">BrandName: Get $200 Bonus, Next BIG WIN: https://teleaspires.com/offer</p>
+                  <div class="flex items-center gap-2 mt-2">
+                    <span class="text-[10px] text-slate-400 font-medium">PROMO-HX</span>
+                    <span class="text-[10px] text-slate-300">·</span>
+                    <span class="text-[10px] text-accent-600 flex items-center gap-1 font-medium">
+                      <span class="w-1.5 h-1.5 rounded-full bg-accent-500"></span>
+                      Delivered
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex flex-wrap items-center gap-3 pt-4">
+              <div class="flex items-center gap-2 px-4 py-2 rounded-xl border bg-primary-50 border-primary-200 text-primary-600">
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
+                <span class="text-sm font-medium text-slate-700">SMS</span>
+              </div>
+              <div class="flex items-center gap-2 px-4 py-2 rounded-xl border bg-accent-50 border-accent-200 text-accent-600">
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" /></svg>
+                <span class="text-sm font-medium text-slate-700">WhatsApp</span>
+              </div>
+              <div class="flex items-center gap-2 px-4 py-2 rounded-xl border bg-primary-50 border-primary-200 text-primary-500">
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
+                <span class="text-sm font-medium text-slate-700">Voice / Teams</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Interactive Composer -->
+          <div class="reveal relative">
+            <div class="absolute -inset-4 bg-gradient-to-br from-primary-200/40 to-accent-200/40 rounded-3xl blur-2xl"></div>
+            <div class="relative bg-white border border-slate-200 shadow-xl rounded-3xl overflow-hidden">
+              <div class="flex items-center justify-between px-6 py-4 border-b border-slate-100">
+                <div class="flex items-center gap-3">
+                  <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center shadow-lg shadow-primary-500/30">
+                    <svg class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
+                  </div>
+                  <div>
+                    <p class="text-slate-800 font-semibold text-sm">TeleAspiresPvtLTD Composer</p>
+                    <p class="text-slate-400 text-xs">Interactive Campaign Simulator</p>
+                  </div>
+                </div>
+                <div class="flex items-center gap-1.5">
+                  <div class="w-2 h-2 rounded-full bg-accent-500 animate-pulse"></div>
+                  <span class="text-[10px] text-slate-500 font-medium">Connected</span>
+                </div>
+              </div>
+
+              <div class="p-6 space-y-4">
+                <div>
+                  <label class="text-[11px] font-medium text-slate-400 uppercase tracking-wider mb-1.5 block">Recipient</label>
+                  <div class="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-slate-50 border border-slate-200">
+                    <span class="text-primary-600 text-sm font-mono font-medium">+1 (555) 014-7823</span>
+                    <span class="ml-auto text-[10px] text-emerald-600 font-medium bg-emerald-50 px-2 py-0.5 rounded-md border border-emerald-100">Valid number</span>
+                  </div>
+                </div>
+
+                <div>
+                  <div class="flex items-center justify-between mb-1.5">
+                    <label class="text-[11px] font-medium text-slate-400 uppercase tracking-wider block">Message</label>
+                    <div class="flex gap-1.5">
+                      <button onclick="setComposerMessage('Your verification code is 729104. Do not share this code with anyone. It expires in 10 minutes.')" class="text-[10px] text-primary-600 bg-primary-50 px-2 py-0.5 rounded border border-primary-100 hover:bg-primary-100 transition-colors">OTP</button>
+                      <button onclick="setComposerMessage('Your order #9821 has shipped and will arrive tomorrow by 4 PM. Track at bit.ly/tele-ship')" class="text-[10px] text-primary-600 bg-primary-50 px-2 py-0.5 rounded border border-primary-100 hover:bg-primary-100 transition-colors">Shipment</button>
+                    </div>
+                  </div>
+                  <textarea
+                    id="composerInput"
+                    rows="3"
+                    class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-slate-700 text-sm leading-relaxed focus:bg-white focus:outline-none focus:border-primary-400 transition-all resize-none"
+                    oninput="updateCharCount()"
+                  >Your verification code is 729104. Do not share this code with anyone. It expires in 10 minutes.</textarea>
+                  <div class="flex items-center justify-between mt-2">
+                    <span class="text-[10px] text-slate-400" id="segmentCount">SMS · 1 segment</span>
+                    <span class="text-[10px] text-primary-600 font-medium" id="charCounter">98 / 160 chars</span>
+                  </div>
+                </div>
+
+                <div class="flex items-center gap-3 pt-2">
+                  <button
+                    id="sendBtn"
+                    onclick="handleSendMessage()"
+                    class="flex-1 flex items-center justify-center gap-2 px-5 py-3 text-sm font-semibold text-white bg-gradient-to-r from-primary-500 to-accent-500 rounded-xl shadow-lg shadow-primary-500/20 hover:shadow-xl hover:scale-[1.01] transition-all"
+                  >
+                    <span>Send Message</span>
+                    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" /></svg>
+                  </button>
+                  <div class="px-4 py-3 rounded-xl bg-slate-50 border border-slate-200">
+                    <span class="text-xs text-slate-500 font-medium">Instant Route</span>
+                  </div>
+                </div>
+
+                <div id="deliveryCard" class="flex items-center gap-3 px-4 py-3 rounded-xl bg-accent-50 border border-accent-200 transition-all duration-300">
+                  <div class="w-8 h-8 rounded-lg bg-accent-100 flex items-center justify-center flex-shrink-0">
+                    <span class="w-2 h-2 rounded-full bg-accent-500 animate-pulse"></span>
+                  </div>
+                  <div class="flex-1">
+                    <p class="text-slate-700 text-xs font-semibold" id="deliveryStatus">Delivery confirmed</p>
+                    <p class="text-slate-400 text-[10px]" id="deliveryTimestamp">Sent just now · 1.2s round-trip</p>
+                  </div>
+                  <span class="text-accent-600 text-xs font-bold">98.9%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SHOWCASE SECTION ==================== -->
+    <section id="platform" class="relative py-24 lg:py-32 bg-white">
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-24">
+          <div class="reveal relative group">
+            <div class="absolute -inset-4 bg-gradient-to-br from-primary-200/40 to-accent-200/40 rounded-3xl blur-2xl group-hover:from-primary-300/50 group-hover:to-accent-300/50 transition-all duration-500"></div>
+            <div class="relative rounded-2xl overflow-hidden border border-slate-200 shadow-xl group-hover:scale-[1.02] transition-transform duration-500">
+              <img
+                src="https://images.pexels.com/photos/17485708/pexels-photo-17485708.png?auto=compress&cs=tinysrgb&h=700&w=1000"
+                alt="Futuristic 3D abstract tech design"
+                class="w-full h-[400px] object-cover group-hover:scale-105 transition-transform duration-700"
+                loading="lazy"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-primary-950/60 via-transparent to-transparent"></div>
+              <div class="absolute bottom-6 left-6 right-6">
+                <div class="bg-white/90 backdrop-blur-sm border border-slate-200 rounded-xl px-5 py-4 inline-block shadow-lg">
+                  <p class="text-slate-800 font-semibold text-sm">Live Campaign Dashboard</p>
+                  <p class="text-slate-500 text-xs mt-0.5">Monitor performance in real-time</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="reveal">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-100 border border-primary-200 mb-4">
+              <p class="text-sm font-semibold text-primary-600 uppercase tracking-wider">Platform</p>
+            </div>
+            <h2 class="font-display text-3xl sm:text-4xl font-bold text-slate-900 mb-5 leading-tight">
+              Everything you need to run <br />
+              <span class="text-gradient">mission-critical messaging</span>
+            </h2>
+            <p class="text-slate-500 leading-relaxed mb-8">
+              TeleAspiresPvtLTD brings SMS, WhatsApp, Voice, and RCS under one unified platform.
+              Built for developers and marketing teams alike — send your first message in minutes,
+              scale to millions per day without breaking a sweat.
+            </p>
+
+            <div class="space-y-5">
+              <div class="flex gap-4 group/item">
+                <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-primary-50 border border-primary-200 flex items-center justify-center group-hover/item:scale-110 group-hover/item:bg-primary-100 transition-all duration-300">
+                  <svg class="w-6 h-6 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
+                </div>
+                <div>
+                  <h3 class="text-slate-900 font-semibold mb-1">Real-time Analytics</h3>
+                  <p class="text-sm text-slate-500 leading-relaxed">Track delivery rates, campaign performance, and ROI with live dashboards.</p>
+                </div>
+              </div>
+
+              <div class="flex gap-4 group/item">
+                <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-primary-50 border border-primary-200 flex items-center justify-center group-hover/item:scale-110 group-hover/item:bg-primary-100 transition-all duration-300">
+                  <svg class="w-6 h-6 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" /></svg>
+                </div>
+                <div>
+                  <h3 class="text-slate-900 font-semibold mb-1">200+ Countries</h3>
+                  <p class="text-sm text-slate-500 leading-relaxed">Direct carrier connections worldwide with local number support.</p>
+                </div>
+              </div>
+
+              <div class="flex gap-4 group/item">
+                <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-primary-50 border border-primary-200 flex items-center justify-center group-hover/item:scale-110 group-hover/item:bg-primary-100 transition-all duration-300">
+                  <svg class="w-6 h-6 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
+                </div>
+                <div>
+                  <h3 class="text-slate-900 font-semibold mb-1">Enterprise Security</h3>
+                  <p class="text-sm text-slate-500 leading-relaxed">GDPR compliant, SOC 2 Type II certified with end-to-end encryption.</p>
+                </div>
+              </div>
+            </div>
+
+            <a href="#features" class="group inline-flex items-center gap-2 mt-8 text-sm font-semibold text-primary-600 hover:text-primary-700 transition-colors">
+              Explore all features
+              <svg class="w-4 h-4 group-hover:translate-x-1.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div class="reveal order-2 lg:order-1">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent-100 border border-accent-200 mb-4">
+              <p class="text-sm font-semibold text-accent-600 uppercase tracking-wider">Global Reach</p>
+            </div>
+            <h2 class="font-display text-3xl sm:text-4xl font-bold text-slate-900 mb-5 leading-tight">
+              One platform, <br />
+              <span class="text-gradient">every corner of the world</span>
+            </h2>
+            <p class="text-slate-500 leading-relaxed mb-8">
+              With direct connections to 700+ carrier networks across 200+ countries,
+              TeleAspiresPvtLTD ensures your messages reach customers wherever they are. Local number
+              support, compliance with regional regulations, and intelligent routing
+              for maximum deliverability.
+            </p>
+
+            <div class="grid grid-cols-3 gap-4 mb-8">
+              <div class="bg-slate-50 border border-slate-200 rounded-xl p-4 text-center hover:border-primary-300 hover:bg-primary-50 transition-all duration-300">
+                <p class="font-display text-2xl font-bold text-gradient">700+</p>
+                <p class="text-xs text-slate-500 mt-1">Carrier networks</p>
+              </div>
+              <div class="bg-slate-50 border border-slate-200 rounded-xl p-4 text-center hover:border-primary-300 hover:bg-primary-50 transition-all duration-300">
+                <p class="font-display text-2xl font-bold text-gradient">200+</p>
+                <p class="text-xs text-slate-500 mt-1">Countries</p>
+              </div>
+              <div class="bg-slate-50 border border-slate-200 rounded-xl p-4 text-center hover:border-primary-300 hover:bg-primary-50 transition-all duration-300">
+                <p class="font-display text-2xl font-bold text-gradient">99.9%</p>
+                <p class="text-xs text-slate-500 mt-1">Uptime SLA</p>
+              </div>
+            </div>
+
+            <a href="#services" class="group inline-flex items-center gap-2 text-sm font-semibold text-primary-600 hover:text-primary-700 transition-colors">
+              View all services
+              <svg class="w-4 h-4 group-hover:translate-x-1.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+            </a>
+          </div>
+
+          <div class="reveal order-1 lg:order-2 relative group">
+            <div class="absolute -inset-4 bg-gradient-to-br from-accent-200/40 to-primary-200/40 rounded-3xl blur-2xl group-hover:from-accent-300/50 group-hover:to-primary-300/50 transition-all duration-500"></div>
+            <div class="relative rounded-2xl overflow-hidden border border-slate-800 bg-slate-950 shadow-2xl h-[420px] flex items-center justify-center group-hover:scale-[1.01] transition-transform duration-500">
+              
+              <!-- User's Official Global Network Map Image -->
+              <img
+                src="./global_network_map.jpg"
+                alt="TeleAspires Global Carrier Backbone Map"
+                class="w-full h-full object-cover object-center select-none"
+                loading="lazy"
+              />
+
+              <!-- Top Telemetry Pill -->
+              <div class="absolute top-4 left-4 right-4 flex items-center justify-between pointer-events-none">
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-slate-900/80 backdrop-blur-md border border-slate-700/60 shadow-lg">
+                  <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                  <span class="text-[11px] font-semibold text-slate-200">700+ Direct Carrier Interconnects</span>
+                </div>
+                <div class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-900/80 backdrop-blur-md border border-slate-700/60 shadow-lg">
+                  <span class="text-[11px] font-mono text-cyan-400">Avg Latency &lt; 1.2s</span>
+                </div>
+              </div>
+
+              <!-- Bottom Floating Badge (as requested in screenshot) -->
+              <div class="absolute bottom-5 left-5 right-5 pointer-events-none">
+                <div class="bg-white/95 backdrop-blur-md border border-slate-200 rounded-xl px-5 py-3.5 inline-block shadow-2xl pointer-events-auto">
+                  <p class="text-slate-900 font-bold text-sm tracking-tight">Global Carrier Backbone</p>
+                  <p class="text-slate-500 text-xs mt-0.5">Direct tier-1 telecommunication routes across 200+ countries</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== FEATURES SECTION ==================== -->
+    <section id="features" class="relative py-24 lg:py-32 bg-slate-50">
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16 reveal">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent-100 border border-accent-200 mb-4">
+            <p class="text-sm font-semibold text-accent-600 uppercase tracking-wider">Features</p>
+          </div>
+          <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mb-4">
+            Powerful Features
+          </h2>
+          <p class="text-lg text-slate-500 max-w-2xl mx-auto">
+            Everything you need to scale your messaging operations
+          </p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="reveal group relative bg-white rounded-2xl p-7 border border-slate-200 hover:border-primary-300 hover:shadow-lg transition-all duration-300 hover:-translate-y-1.5">
+            <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-primary-100 to-accent-100 flex items-center justify-center mb-5 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
+              <svg class="w-7 h-7 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+            </div>
+            <h3 class="font-display text-xl font-semibold text-slate-900 mb-3">Instant Delivery</h3>
+            <p class="text-slate-500 leading-relaxed text-sm">Lightning-fast message delivery with 99.9% success rate. 95% of messages delivered within 5 seconds globally.</p>
+            <div class="absolute inset-x-0 bottom-0 h-0.5 rounded-b-2xl bg-gradient-to-r from-transparent via-primary-400/0 to-transparent group-hover:via-primary-400 transition-all duration-500"></div>
+          </div>
+
+          <div class="reveal group relative bg-white rounded-2xl p-7 border border-slate-200 hover:border-accent-300 hover:shadow-lg transition-all duration-300 hover:-translate-y-1.5">
+            <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-accent-100 to-primary-100 flex items-center justify-center mb-5 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
+              <svg class="w-7 h-7 text-accent-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
+            </div>
+            <h3 class="font-display text-xl font-semibold text-slate-900 mb-3">Advanced Analytics</h3>
+            <p class="text-slate-500 leading-relaxed text-sm">Real-time insights, delivery reports & campaign performance tracking. Drill down into every message status.</p>
+            <div class="absolute inset-x-0 bottom-0 h-0.5 rounded-b-2xl bg-gradient-to-r from-transparent via-accent-400/0 to-transparent group-hover:via-accent-400 transition-all duration-500"></div>
+          </div>
+
+          <div class="reveal group relative bg-white rounded-2xl p-7 border border-slate-200 hover:border-primary-300 hover:shadow-lg transition-all duration-300 hover:-translate-y-1.5">
+            <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-primary-100 to-accent-100 flex items-center justify-center mb-5 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
+              <svg class="w-7 h-7 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
+            </div>
+            <h3 class="font-display text-xl font-semibold text-slate-900 mb-3">Enterprise Security</h3>
+            <p class="text-slate-500 leading-relaxed text-sm">End-to-end encryption & GDPR compliant infrastructure. SOC 2 Type II certified with full audit logs.</p>
+            <div class="absolute inset-x-0 bottom-0 h-0.5 rounded-b-2xl bg-gradient-to-r from-transparent via-primary-400/0 to-transparent group-hover:via-primary-400 transition-all duration-500"></div>
+          </div>
+
+          <div class="reveal group relative bg-white rounded-2xl p-7 border border-slate-200 hover:border-accent-300 hover:shadow-lg transition-all duration-300 hover:-translate-y-1.5">
+            <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-accent-100 to-primary-100 flex items-center justify-center mb-5 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
+              <svg class="w-7 h-7 text-accent-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" /></svg>
+            </div>
+            <h3 class="font-display text-xl font-semibold text-slate-900 mb-3">Global Reach</h3>
+            <p class="text-slate-500 leading-relaxed text-sm">Send to 200+ countries with local number support. Direct carrier connections ensure maximum deliverability.</p>
+            <div class="absolute inset-x-0 bottom-0 h-0.5 rounded-b-2xl bg-gradient-to-r from-transparent via-accent-400/0 to-transparent group-hover:via-accent-400 transition-all duration-500"></div>
+          </div>
+
+          <div class="reveal group relative bg-white rounded-2xl p-7 border border-slate-200 hover:border-primary-300 hover:shadow-lg transition-all duration-300 hover:-translate-y-1.5">
+            <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-primary-100 to-accent-100 flex items-center justify-center mb-5 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
+              <svg class="w-7 h-7 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" /></svg>
+            </div>
+            <h3 class="font-display text-xl font-semibold text-slate-900 mb-3">Smart Automation</h3>
+            <p class="text-slate-500 leading-relaxed text-sm">Automated workflows, drip campaigns & triggers. Schedule messages, set conditions, and let TeleAspiresPvtLTD do the rest.</p>
+            <div class="absolute inset-x-0 bottom-0 h-0.5 rounded-b-2xl bg-gradient-to-r from-transparent via-primary-400/0 to-transparent group-hover:via-primary-400 transition-all duration-500"></div>
+          </div>
+
+          <div class="reveal group relative bg-white rounded-2xl p-7 border border-slate-200 hover:border-accent-300 hover:shadow-lg transition-all duration-300 hover:-translate-y-1.5">
+            <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-accent-100 to-primary-100 flex items-center justify-center mb-5 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
+              <svg class="w-7 h-7 text-accent-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z" /></svg>
+            </div>
+            <h3 class="font-display text-xl font-semibold text-slate-900 mb-3">Easy Integration</h3>
+            <p class="text-slate-500 leading-relaxed text-sm">REST API, webhooks & 50+ platform integrations. Connect with your CRM, marketing tools, and custom applications.</p>
+            <div class="absolute inset-x-0 bottom-0 h-0.5 rounded-b-2xl bg-gradient-to-r from-transparent via-accent-400/0 to-transparent group-hover:via-accent-400 transition-all duration-500"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SERVICES SECTION ==================== -->
+    <section id="services" class="relative py-24 lg:py-32 bg-white">
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16 reveal">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-100 border border-primary-200 mb-4">
+            <p class="text-sm font-semibold text-primary-600 uppercase tracking-wider">Services</p>
+          </div>
+          <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mb-4">
+            Our Services
+          </h2>
+          <p class="text-lg text-slate-500 max-w-2xl mx-auto">
+            Comprehensive messaging solutions for every channel
+          </p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="reveal group relative overflow-hidden bg-primary-50 border border-slate-200 rounded-2xl p-8 hover:shadow-xl hover:border-transparent transition-all duration-300 hover:-translate-y-1.5 flex flex-col">
+            <div class="relative w-14 h-14 rounded-xl bg-gradient-to-br from-primary-500 to-primary-600 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300 shadow-lg">
+              <svg class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
+            </div>
+            <h3 class="font-display text-xl font-semibold text-slate-900 mb-3">SMS Messaging</h3>
+            <p class="text-slate-500 leading-relaxed text-sm mb-6">High-volume A2P SMS with global delivery. Marketing campaigns, OTP, alerts, and notifications — all from one platform.</p>
+            <ul class="space-y-2.5 mb-8 flex-1">
+              <li class="flex items-center gap-2.5 text-sm text-slate-600"><div class="w-1.5 h-1.5 rounded-full bg-primary-500 flex-shrink-0"></div>Bulk SMS campaigns</li>
+              <li class="flex items-center gap-2.5 text-sm text-slate-600"><div class="w-1.5 h-1.5 rounded-full bg-primary-500 flex-shrink-0"></div>OTP & 2FA codes</li>
+              <li class="flex items-center gap-2.5 text-sm text-slate-600"><div class="w-1.5 h-1.5 rounded-full bg-primary-500 flex-shrink-0"></div>Delivery receipts</li>
+              <li class="flex items-center gap-2.5 text-sm text-slate-600"><div class="w-1.5 h-1.5 rounded-full bg-primary-500 flex-shrink-0"></div>Scheduled sending</li>
+            </ul>
+            <button onclick="openAuth('signup')" class="inline-flex items-center gap-2 text-sm font-semibold text-primary-600 hover:text-primary-700 transition-colors">
+              Learn more
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+            </button>
+          </div>
+
+          <div class="reveal group relative overflow-hidden bg-accent-50 border border-slate-200 rounded-2xl p-8 hover:shadow-xl hover:border-transparent transition-all duration-300 hover:-translate-y-1.5 flex flex-col">
+            <div class="relative w-14 h-14 rounded-xl bg-gradient-to-br from-accent-500 to-accent-600 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300 shadow-lg">
+              <svg class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" /></svg>
+            </div>
+            <h3 class="font-display text-xl font-semibold text-slate-900 mb-3">WhatsApp Business</h3>
+            <p class="text-slate-500 leading-relaxed text-sm mb-6">Official WhatsApp Business API integration. Send templates, session messages, and rich media to customers worldwide.</p>
+            <ul class="space-y-2.5 mb-8 flex-1">
+              <li class="flex items-center gap-2.5 text-sm text-slate-600"><div class="w-1.5 h-1.5 rounded-full bg-accent-500 flex-shrink-0"></div>Template messaging</li>
+              <li class="flex items-center gap-2.5 text-sm text-slate-600"><div class="w-1.5 h-1.5 rounded-full bg-accent-500 flex-shrink-0"></div>Rich media support</li>
+              <li class="flex items-center gap-2.5 text-sm text-slate-600"><div class="w-1.5 h-1.5 rounded-full bg-accent-500 flex-shrink-0"></div>Session messages</li>
+              <li class="flex items-center gap-2.5 text-sm text-slate-600"><div class="w-1.5 h-1.5 rounded-full bg-accent-500 flex-shrink-0"></div>Chat automation</li>
+            </ul>
+            <button onclick="openAuth('signup')" class="inline-flex items-center gap-2 text-sm font-semibold text-accent-600 hover:text-accent-700 transition-colors">
+              Learn more
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+            </button>
+          </div>
+
+          <div class="reveal group relative overflow-hidden bg-primary-50 border border-slate-200 rounded-2xl p-8 hover:shadow-xl hover:border-transparent transition-all duration-300 hover:-translate-y-1.5 flex flex-col">
+            <div class="relative w-14 h-14 rounded-xl bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300 shadow-lg">
+              <svg class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
+            </div>
+            <h3 class="font-display text-xl font-semibold text-slate-900 mb-3">Voice Calls</h3>
+            <p class="text-slate-500 leading-relaxed text-sm mb-6">Automated voice broadcasting and IVR systems. Reach customers with voice messages, reminders, and interactive menus.</p>
+            <ul class="space-y-2.5 mb-8 flex-1">
+              <li class="flex items-center gap-2.5 text-sm text-slate-600"><div class="w-1.5 h-1.5 rounded-full bg-primary-500 flex-shrink-0"></div>Voice broadcasting</li>
+              <li class="flex items-center gap-2.5 text-sm text-slate-600"><div class="w-1.5 h-1.5 rounded-full bg-primary-500 flex-shrink-0"></div>IVR menus</li>
+              <li class="flex items-center gap-2.5 text-sm text-slate-600"><div class="w-1.5 h-1.5 rounded-full bg-primary-500 flex-shrink-0"></div>Call recording</li>
+              <li class="flex items-center gap-2.5 text-sm text-slate-600"><div class="w-1.5 h-1.5 rounded-full bg-primary-500 flex-shrink-0"></div>Text-to-speech</li>
+            </ul>
+            <button onclick="openAuth('signup')" class="inline-flex items-center gap-2 text-sm font-semibold text-primary-600 hover:text-primary-700 transition-colors">
+              Learn more
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+            </button>
+          </div>
+
+          <div class="reveal group relative overflow-hidden bg-accent-50 border border-slate-200 rounded-2xl p-8 hover:shadow-xl hover:border-transparent transition-all duration-300 hover:-translate-y-1.5 flex flex-col">
+            <div class="relative w-14 h-14 rounded-xl bg-gradient-to-br from-accent-500 to-primary-600 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300 shadow-lg">
+              <svg class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" /></svg>
+            </div>
+            <h3 class="font-display text-xl font-semibold text-slate-900 mb-3">RCS Messaging</h3>
+            <p class="text-slate-500 leading-relaxed text-sm mb-6">Rich Communication Services for the next generation of messaging. Send branded, interactive messages with media and carousels.</p>
+            <ul class="space-y-2.5 mb-8 flex-1">
+              <li class="flex items-center gap-2.5 text-sm text-slate-600"><div class="w-1.5 h-1.5 rounded-full bg-accent-500 flex-shrink-0"></div>Rich media & carousels</li>
+              <li class="flex items-center gap-2.5 text-sm text-slate-600"><div class="w-1.5 h-1.5 rounded-full bg-accent-500 flex-shrink-0"></div>Branded sender profiles</li>
+              <li class="flex items-center gap-2.5 text-sm text-slate-600"><div class="w-1.5 h-1.5 rounded-full bg-accent-500 flex-shrink-0"></div>Suggested replies</li>
+              <li class="flex items-center gap-2.5 text-sm text-slate-600"><div class="w-1.5 h-1.5 rounded-full bg-accent-500 flex-shrink-0"></div>Read receipts</li>
+            </ul>
+            <button onclick="openAuth('signup')" class="inline-flex items-center gap-2 text-sm font-semibold text-accent-600 hover:text-accent-700 transition-colors">
+              Learn more
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== TESTIMONIALS SECTION ==================== -->
+    <section id="testimonials" class="relative py-24 lg:py-32 overflow-hidden bg-slate-50">
+      <div class="absolute inset-0 bg-radial-glow opacity-30"></div>
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16 reveal">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-100 border border-primary-200 mb-4">
+            <svg class="w-4 h-4 text-primary-600 fill-primary-500" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+            <p class="text-sm font-semibold text-primary-600 uppercase tracking-wider">Testimonials</p>
+          </div>
+          <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mb-4">
+            What Our Customers Say
+          </h2>
+          <p class="text-lg text-slate-500 max-w-2xl mx-auto">
+            Trusted by 10,000+ businesses worldwide
+          </p>
+        </div>
+      </div>
+
+      <div class="relative overflow-hidden w-full">
+        <div class="flex gap-6 marquee-track marquee-testimonials">
+          <!-- ===== Group A (12 cards) ===== -->
+          <div class="flex-shrink-0 w-[340px] bg-white border border-slate-200 rounded-2xl p-6 hover:border-primary-300 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-3xl text-primary-300 font-serif font-bold">&ldquo;</span>
+              <div class="flex gap-1 text-primary-400">★★★★★</div>
+            </div>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6">&ldquo;Transformed our customer engagement! 300% increase in response rates.&rdquo;</p>
+            <div class="flex items-center gap-3">
+              <div class="w-11 h-11 rounded-full bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center text-white font-semibold text-sm">S</div>
+              <div><p class="text-slate-800 font-semibold text-sm">Sarah M.</p><p class="text-slate-400 text-xs">Marketing Director</p></div>
+            </div>
+          </div>
+
+          <div class="flex-shrink-0 w-[340px] bg-white border border-slate-200 rounded-2xl p-6 hover:border-primary-300 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-3xl text-primary-300 font-serif font-bold">&ldquo;</span>
+              <div class="flex gap-1 text-primary-400">★★★★★</div>
+            </div>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6">&ldquo;Lightning fast delivery & amazing support. Best SMS platform!&rdquo;</p>
+            <div class="flex items-center gap-3">
+              <div class="w-11 h-11 rounded-full bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center text-white font-semibold text-sm">J</div>
+              <div><p class="text-slate-800 font-semibold text-sm">John D.</p><p class="text-slate-400 text-xs">CTO</p></div>
+            </div>
+          </div>
+
+          <div class="flex-shrink-0 w-[340px] bg-white border border-slate-200 rounded-2xl p-6 hover:border-primary-300 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-3xl text-primary-300 font-serif font-bold">&ldquo;</span>
+              <div class="flex gap-1 text-primary-400">★★★★★</div>
+            </div>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6">&ldquo;API integration was seamless. 99.9% uptime guaranteed.&rdquo;</p>
+            <div class="flex items-center gap-3">
+              <div class="w-11 h-11 rounded-full bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center text-white font-semibold text-sm">M</div>
+              <div><p class="text-slate-800 font-semibold text-sm">Mike R.</p><p class="text-slate-400 text-xs">DevOps Lead</p></div>
+            </div>
+          </div>
+
+          <div class="flex-shrink-0 w-[340px] bg-white border border-slate-200 rounded-2xl p-6 hover:border-primary-300 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-3xl text-primary-300 font-serif font-bold">&ldquo;</span>
+              <div class="flex gap-1 text-primary-400">★★★★★</div>
+            </div>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6">&ldquo;Affordable pricing with enterprise features. Highly recommend!&rdquo;</p>
+            <div class="flex items-center gap-3">
+              <div class="w-11 h-11 rounded-full bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center text-white font-semibold text-sm">L</div>
+              <div><p class="text-slate-800 font-semibold text-sm">Lisa K.</p><p class="text-slate-400 text-xs">Operations Manager</p></div>
+            </div>
+          </div>
+
+          <div class="flex-shrink-0 w-[340px] bg-white border border-slate-200 rounded-2xl p-6 hover:border-primary-300 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-3xl text-primary-300 font-serif font-bold">&ldquo;</span>
+              <div class="flex gap-1 text-primary-400">★★★★★</div>
+            </div>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6">&ldquo;Global reach with local compliance. Perfect for our international scale.&rdquo;</p>
+            <div class="flex items-center gap-3">
+              <div class="w-11 h-11 rounded-full bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center text-white font-semibold text-sm">D</div>
+              <div><p class="text-slate-800 font-semibold text-sm">David S.</p><p class="text-slate-400 text-xs">VP Engineering</p></div>
+            </div>
+          </div>
+
+          <div class="flex-shrink-0 w-[340px] bg-white border border-slate-200 rounded-2xl p-6 hover:border-primary-300 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-3xl text-primary-300 font-serif font-bold">&ldquo;</span>
+              <div class="flex gap-1 text-primary-400">★★★★★</div>
+            </div>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6">&ldquo;Analytics dashboard is incredible. ROI visible immediately.&rdquo;</p>
+            <div class="flex items-center gap-3">
+              <div class="w-11 h-11 rounded-full bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center text-white font-semibold text-sm">E</div>
+              <div><p class="text-slate-800 font-semibold text-sm">Emma W.</p><p class="text-slate-400 text-xs">Growth Lead</p></div>
+            </div>
+          </div>
+
+          <div class="flex-shrink-0 w-[340px] bg-white border border-slate-200 rounded-2xl p-6 hover:border-primary-300 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-3xl text-primary-300 font-serif font-bold">&ldquo;</span>
+              <div class="flex gap-1 text-primary-400">★★★★★</div>
+            </div>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6">&ldquo;Transformed our customer engagement! 300% increase in response rates.&rdquo;</p>
+            <div class="flex items-center gap-3">
+              <div class="w-11 h-11 rounded-full bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center text-white font-semibold text-sm">S</div>
+              <div><p class="text-slate-800 font-semibold text-sm">Sarah M.</p><p class="text-slate-400 text-xs">Marketing Director</p></div>
+            </div>
+          </div>
+
+          <div class="flex-shrink-0 w-[340px] bg-white border border-slate-200 rounded-2xl p-6 hover:border-primary-300 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-3xl text-primary-300 font-serif font-bold">&ldquo;</span>
+              <div class="flex gap-1 text-primary-400">★★★★★</div>
+            </div>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6">&ldquo;Lightning fast delivery & amazing support. Best SMS platform!&rdquo;</p>
+            <div class="flex items-center gap-3">
+              <div class="w-11 h-11 rounded-full bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center text-white font-semibold text-sm">J</div>
+              <div><p class="text-slate-800 font-semibold text-sm">John D.</p><p class="text-slate-400 text-xs">CTO</p></div>
+            </div>
+          </div>
+
+          <div class="flex-shrink-0 w-[340px] bg-white border border-slate-200 rounded-2xl p-6 hover:border-primary-300 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-3xl text-primary-300 font-serif font-bold">&ldquo;</span>
+              <div class="flex gap-1 text-primary-400">★★★★★</div>
+            </div>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6">&ldquo;API integration was seamless. 99.9% uptime guaranteed.&rdquo;</p>
+            <div class="flex items-center gap-3">
+              <div class="w-11 h-11 rounded-full bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center text-white font-semibold text-sm">M</div>
+              <div><p class="text-slate-800 font-semibold text-sm">Mike R.</p><p class="text-slate-400 text-xs">DevOps Lead</p></div>
+            </div>
+          </div>
+
+          <div class="flex-shrink-0 w-[340px] bg-white border border-slate-200 rounded-2xl p-6 hover:border-primary-300 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-3xl text-primary-300 font-serif font-bold">&ldquo;</span>
+              <div class="flex gap-1 text-primary-400">★★★★★</div>
+            </div>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6">&ldquo;Affordable pricing with enterprise features. Highly recommend!&rdquo;</p>
+            <div class="flex items-center gap-3">
+              <div class="w-11 h-11 rounded-full bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center text-white font-semibold text-sm">L</div>
+              <div><p class="text-slate-800 font-semibold text-sm">Lisa K.</p><p class="text-slate-400 text-xs">Operations Manager</p></div>
+            </div>
+          </div>
+
+          <div class="flex-shrink-0 w-[340px] bg-white border border-slate-200 rounded-2xl p-6 hover:border-primary-300 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-3xl text-primary-300 font-serif font-bold">&ldquo;</span>
+              <div class="flex gap-1 text-primary-400">★★★★★</div>
+            </div>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6">&ldquo;Global reach with local compliance. Perfect for our international scale.&rdquo;</p>
+            <div class="flex items-center gap-3">
+              <div class="w-11 h-11 rounded-full bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center text-white font-semibold text-sm">D</div>
+              <div><p class="text-slate-800 font-semibold text-sm">David S.</p><p class="text-slate-400 text-xs">VP Engineering</p></div>
+            </div>
+          </div>
+
+          <div class="flex-shrink-0 w-[340px] bg-white border border-slate-200 rounded-2xl p-6 hover:border-primary-300 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-3xl text-primary-300 font-serif font-bold">&ldquo;</span>
+              <div class="flex gap-1 text-primary-400">★★★★★</div>
+            </div>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6">&ldquo;Analytics dashboard is incredible. ROI visible immediately.&rdquo;</p>
+            <div class="flex items-center gap-3">
+              <div class="w-11 h-11 rounded-full bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center text-white font-semibold text-sm">E</div>
+              <div><p class="text-slate-800 font-semibold text-sm">Emma W.</p><p class="text-slate-400 text-xs">Growth Lead</p></div>
+            </div>
+          </div>
+
+          <!-- ===== Group B (Identical 12 cards for seamless infinite loop) ===== -->
+          <div class="flex-shrink-0 w-[340px] bg-white border border-slate-200 rounded-2xl p-6 hover:border-primary-300 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-3xl text-primary-300 font-serif font-bold">&ldquo;</span>
+              <div class="flex gap-1 text-primary-400">★★★★★</div>
+            </div>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6">&ldquo;Transformed our customer engagement! 300% increase in response rates.&rdquo;</p>
+            <div class="flex items-center gap-3">
+              <div class="w-11 h-11 rounded-full bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center text-white font-semibold text-sm">S</div>
+              <div><p class="text-slate-800 font-semibold text-sm">Sarah M.</p><p class="text-slate-400 text-xs">Marketing Director</p></div>
+            </div>
+          </div>
+
+          <div class="flex-shrink-0 w-[340px] bg-white border border-slate-200 rounded-2xl p-6 hover:border-primary-300 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-3xl text-primary-300 font-serif font-bold">&ldquo;</span>
+              <div class="flex gap-1 text-primary-400">★★★★★</div>
+            </div>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6">&ldquo;Lightning fast delivery & amazing support. Best SMS platform!&rdquo;</p>
+            <div class="flex items-center gap-3">
+              <div class="w-11 h-11 rounded-full bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center text-white font-semibold text-sm">J</div>
+              <div><p class="text-slate-800 font-semibold text-sm">John D.</p><p class="text-slate-400 text-xs">CTO</p></div>
+            </div>
+          </div>
+
+          <div class="flex-shrink-0 w-[340px] bg-white border border-slate-200 rounded-2xl p-6 hover:border-primary-300 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-3xl text-primary-300 font-serif font-bold">&ldquo;</span>
+              <div class="flex gap-1 text-primary-400">★★★★★</div>
+            </div>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6">&ldquo;API integration was seamless. 99.9% uptime guaranteed.&rdquo;</p>
+            <div class="flex items-center gap-3">
+              <div class="w-11 h-11 rounded-full bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center text-white font-semibold text-sm">M</div>
+              <div><p class="text-slate-800 font-semibold text-sm">Mike R.</p><p class="text-slate-400 text-xs">DevOps Lead</p></div>
+            </div>
+          </div>
+
+          <div class="flex-shrink-0 w-[340px] bg-white border border-slate-200 rounded-2xl p-6 hover:border-primary-300 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-3xl text-primary-300 font-serif font-bold">&ldquo;</span>
+              <div class="flex gap-1 text-primary-400">★★★★★</div>
+            </div>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6">&ldquo;Affordable pricing with enterprise features. Highly recommend!&rdquo;</p>
+            <div class="flex items-center gap-3">
+              <div class="w-11 h-11 rounded-full bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center text-white font-semibold text-sm">L</div>
+              <div><p class="text-slate-800 font-semibold text-sm">Lisa K.</p><p class="text-slate-400 text-xs">Operations Manager</p></div>
+            </div>
+          </div>
+
+          <div class="flex-shrink-0 w-[340px] bg-white border border-slate-200 rounded-2xl p-6 hover:border-primary-300 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-3xl text-primary-300 font-serif font-bold">&ldquo;</span>
+              <div class="flex gap-1 text-primary-400">★★★★★</div>
+            </div>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6">&ldquo;Global reach with local compliance. Perfect for our international scale.&rdquo;</p>
+            <div class="flex items-center gap-3">
+              <div class="w-11 h-11 rounded-full bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center text-white font-semibold text-sm">D</div>
+              <div><p class="text-slate-800 font-semibold text-sm">David S.</p><p class="text-slate-400 text-xs">VP Engineering</p></div>
+            </div>
+          </div>
+
+          <div class="flex-shrink-0 w-[340px] bg-white border border-slate-200 rounded-2xl p-6 hover:border-primary-300 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-3xl text-primary-300 font-serif font-bold">&ldquo;</span>
+              <div class="flex gap-1 text-primary-400">★★★★★</div>
+            </div>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6">&ldquo;Analytics dashboard is incredible. ROI visible immediately.&rdquo;</p>
+            <div class="flex items-center gap-3">
+              <div class="w-11 h-11 rounded-full bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center text-white font-semibold text-sm">E</div>
+              <div><p class="text-slate-800 font-semibold text-sm">Emma W.</p><p class="text-slate-400 text-xs">Growth Lead</p></div>
+            </div>
+          </div>
+
+          <div class="flex-shrink-0 w-[340px] bg-white border border-slate-200 rounded-2xl p-6 hover:border-primary-300 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-3xl text-primary-300 font-serif font-bold">&ldquo;</span>
+              <div class="flex gap-1 text-primary-400">★★★★★</div>
+            </div>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6">&ldquo;Transformed our customer engagement! 300% increase in response rates.&rdquo;</p>
+            <div class="flex items-center gap-3">
+              <div class="w-11 h-11 rounded-full bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center text-white font-semibold text-sm">S</div>
+              <div><p class="text-slate-800 font-semibold text-sm">Sarah M.</p><p class="text-slate-400 text-xs">Marketing Director</p></div>
+            </div>
+          </div>
+
+          <div class="flex-shrink-0 w-[340px] bg-white border border-slate-200 rounded-2xl p-6 hover:border-primary-300 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-3xl text-primary-300 font-serif font-bold">&ldquo;</span>
+              <div class="flex gap-1 text-primary-400">★★★★★</div>
+            </div>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6">&ldquo;Lightning fast delivery & amazing support. Best SMS platform!&rdquo;</p>
+            <div class="flex items-center gap-3">
+              <div class="w-11 h-11 rounded-full bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center text-white font-semibold text-sm">J</div>
+              <div><p class="text-slate-800 font-semibold text-sm">John D.</p><p class="text-slate-400 text-xs">CTO</p></div>
+            </div>
+          </div>
+
+          <div class="flex-shrink-0 w-[340px] bg-white border border-slate-200 rounded-2xl p-6 hover:border-primary-300 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-3xl text-primary-300 font-serif font-bold">&ldquo;</span>
+              <div class="flex gap-1 text-primary-400">★★★★★</div>
+            </div>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6">&ldquo;API integration was seamless. 99.9% uptime guaranteed.&rdquo;</p>
+            <div class="flex items-center gap-3">
+              <div class="w-11 h-11 rounded-full bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center text-white font-semibold text-sm">M</div>
+              <div><p class="text-slate-800 font-semibold text-sm">Mike R.</p><p class="text-slate-400 text-xs">DevOps Lead</p></div>
+            </div>
+          </div>
+
+          <div class="flex-shrink-0 w-[340px] bg-white border border-slate-200 rounded-2xl p-6 hover:border-primary-300 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-3xl text-primary-300 font-serif font-bold">&ldquo;</span>
+              <div class="flex gap-1 text-primary-400">★★★★★</div>
+            </div>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6">&ldquo;Affordable pricing with enterprise features. Highly recommend!&rdquo;</p>
+            <div class="flex items-center gap-3">
+              <div class="w-11 h-11 rounded-full bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center text-white font-semibold text-sm">L</div>
+              <div><p class="text-slate-800 font-semibold text-sm">Lisa K.</p><p class="text-slate-400 text-xs">Operations Manager</p></div>
+            </div>
+          </div>
+
+          <div class="flex-shrink-0 w-[340px] bg-white border border-slate-200 rounded-2xl p-6 hover:border-primary-300 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-3xl text-primary-300 font-serif font-bold">&ldquo;</span>
+              <div class="flex gap-1 text-primary-400">★★★★★</div>
+            </div>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6">&ldquo;Global reach with local compliance. Perfect for our international scale.&rdquo;</p>
+            <div class="flex items-center gap-3">
+              <div class="w-11 h-11 rounded-full bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center text-white font-semibold text-sm">D</div>
+              <div><p class="text-slate-800 font-semibold text-sm">David S.</p><p class="text-slate-400 text-xs">VP Engineering</p></div>
+            </div>
+          </div>
+
+          <div class="flex-shrink-0 w-[340px] bg-white border border-slate-200 rounded-2xl p-6 hover:border-primary-300 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-3xl text-primary-300 font-serif font-bold">&ldquo;</span>
+              <div class="flex gap-1 text-primary-400">★★★★★</div>
+            </div>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6">&ldquo;Analytics dashboard is incredible. ROI visible immediately.&rdquo;</p>
+            <div class="flex items-center gap-3">
+              <div class="w-11 h-11 rounded-full bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center text-white font-semibold text-sm">E</div>
+              <div><p class="text-slate-800 font-semibold text-sm">Emma W.</p><p class="text-slate-400 text-xs">Growth Lead</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-slate-50 to-transparent pointer-events-none z-10"></div>
+        <div class="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-slate-50 to-transparent pointer-events-none z-10"></div>
+      </div>
+    </section>
+
+    <!-- ==================== PARTNERS / ASSOCIATED WITH SECTION ==================== -->
+    <section id="partners" class="relative py-16 lg:py-20 border-y border-slate-200 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <p class="text-center text-sm font-semibold text-slate-400 uppercase tracking-wider mb-10 reveal">
+          Associated With — Trusted by the world&rsquo;s leading telecom &amp; tech companies
+        </p>
+      </div>
+      <div class="relative overflow-hidden group">
+        <div class="flex gap-6 marquee-track marquee-partners items-center">
+          <!-- ===== Group A (18 logos) ===== -->
+          <div class="flex-shrink-0 flex items-center justify-center px-8 py-5 rounded-xl bg-white border border-slate-200 hover:border-primary-300 hover:shadow-md transition-all duration-300 hover:scale-105">
+            <svg viewBox="0 0 130 32" class="h-8 text-slate-500 hover:text-slate-700" fill="none">
+              <circle cx="14" cy="16" r="10" stroke="currentColor" stroke-width="2.5" />
+              <text x="30" y="22" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="currentColor" letter-spacing="-0.3">OneXtel</text>
+            </svg>
+          </div>
+
+          <div class="flex-shrink-0 flex items-center justify-center px-8 py-5 rounded-xl bg-white border border-slate-200 hover:border-primary-300 hover:shadow-md transition-all duration-300 hover:scale-105">
+            <svg viewBox="0 0 90 32" class="h-8 text-slate-500 hover:text-slate-700" fill="none">
+              <path d="M5 6 L5 22 L14 22 M5 14 L12 14" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
+              <text x="18" y="22" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="currentColor" letter-spacing="-0.3">Tanla</text>
+            </svg>
+          </div>
+
+          <div class="flex-shrink-0 flex items-center justify-center px-8 py-5 rounded-xl bg-white border border-slate-200 hover:border-primary-300 hover:shadow-md transition-all duration-300 hover:scale-105">
+            <svg viewBox="0 0 115 32" class="h-8" fill="none">
+              <text x="0" y="22" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#E40000" letter-spacing="-0.5">airtel</text>
+              <path d="M82 16 Q92 4 108 8" stroke="#E40000" stroke-width="2.5" fill="none" stroke-linecap="round" />
+              <circle cx="108" cy="9" r="3.5" fill="#E40000" />
+            </svg>
+          </div>
+
+          <div class="flex-shrink-0 flex items-center justify-center px-8 py-5 rounded-xl bg-white border border-slate-200 hover:border-primary-300 hover:shadow-md transition-all duration-300 hover:scale-105">
+            <svg viewBox="0 0 100 32" class="h-8" fill="none">
+              <rect x="0" y="4" width="28" height="24" rx="4" fill="#0073CF" />
+              <text x="4" y="22" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#fff">E</text>
+              <text x="32" y="22" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#0073CF" letter-spacing="-0.3">ENTEL</text>
+            </svg>
+          </div>
+
+          <div class="flex-shrink-0 flex items-center justify-center px-8 py-5 rounded-xl bg-white border border-slate-200 hover:border-primary-300 hover:shadow-md transition-all duration-300 hover:scale-105">
+            <svg viewBox="0 0 110 32" class="h-8 text-slate-500" fill="none">
+              <circle cx="12" cy="16" r="9" stroke="currentColor" stroke-width="2.5" />
+              <circle cx="12" cy="16" r="3.5" fill="currentColor" />
+              <text x="26" y="22" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="currentColor" letter-spacing="-0.3">Omobio</text>
+            </svg>
+          </div>
+
+          <div class="flex-shrink-0 flex items-center justify-center px-8 py-5 rounded-xl bg-white border border-slate-200 hover:border-primary-300 hover:shadow-md transition-all duration-300 hover:scale-105">
+            <svg viewBox="0 0 125 32" class="h-8" fill="none">
+              <rect x="0" y="4" width="22" height="22" rx="4" fill="#E20074" />
+              <text x="5" y="20" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#fff">T</text>
+              <text x="28" y="22" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#E20074" letter-spacing="-0.3">-Mobile</text>
+            </svg>
+          </div>
+
+          <div class="flex-shrink-0 flex items-center justify-center px-8 py-5 rounded-xl bg-white border border-slate-200 hover:border-primary-300 hover:shadow-md transition-all duration-300 hover:scale-105">
+            <svg viewBox="0 0 195 32" class="h-8" fill="none">
+              <circle cx="14" cy="16" r="11" stroke="#1B49C0" stroke-width="2.5" />
+              <text x="7" y="21" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#1B49C0">T</text>
+              <text x="30" y="22" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#1B49C0" letter-spacing="-0.2">Tata Communications</text>
+            </svg>
+          </div>
+
+          <div class="flex-shrink-0 flex items-center justify-center px-8 py-5 rounded-xl bg-white border border-slate-200 hover:border-primary-300 hover:shadow-md transition-all duration-300 hover:scale-105">
+            <svg viewBox="0 0 105 32" class="h-8 text-slate-500" fill="none">
+              <path d="M3 8 L3 24 M3 14 L14 14 M3 24 L14 24" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
+              <text x="18" y="22" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="currentColor" letter-spacing="-0.3">Telkosh</text>
+            </svg>
+          </div>
+
+          <div class="flex-shrink-0 flex items-center justify-center px-8 py-5 rounded-xl bg-white border border-slate-200 hover:border-primary-300 hover:shadow-md transition-all duration-300 hover:scale-105">
+            <svg viewBox="0 0 115 32" class="h-8 text-slate-500" fill="none">
+              <circle cx="10" cy="16" r="7" stroke="currentColor" stroke-width="2" />
+              <path d="M10 9 L10 23 M3 16 L17 16" stroke="currentColor" stroke-width="1.5" opacity="0.5" />
+              <text x="22" y="22" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="currentColor" letter-spacing="-0.3">Broadnet</text>
+            </svg>
+          </div>
+
+          <div class="flex-shrink-0 flex items-center justify-center px-8 py-5 rounded-xl bg-white border border-slate-200 hover:border-primary-300 hover:shadow-md transition-all duration-300 hover:scale-105">
+            <svg viewBox="0 0 130 32" class="h-8 text-slate-500 hover:text-slate-700" fill="none">
+              <circle cx="14" cy="16" r="10" stroke="currentColor" stroke-width="2.5" />
+              <text x="30" y="22" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="currentColor" letter-spacing="-0.3">OneXtel</text>
+            </svg>
+          </div>
+
+          <div class="flex-shrink-0 flex items-center justify-center px-8 py-5 rounded-xl bg-white border border-slate-200 hover:border-primary-300 hover:shadow-md transition-all duration-300 hover:scale-105">
+            <svg viewBox="0 0 90 32" class="h-8 text-slate-500 hover:text-slate-700" fill="none">
+              <path d="M5 6 L5 22 L14 22 M5 14 L12 14" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
+              <text x="18" y="22" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="currentColor" letter-spacing="-0.3">Tanla</text>
+            </svg>
+          </div>
+
+          <div class="flex-shrink-0 flex items-center justify-center px-8 py-5 rounded-xl bg-white border border-slate-200 hover:border-primary-300 hover:shadow-md transition-all duration-300 hover:scale-105">
+            <svg viewBox="0 0 115 32" class="h-8" fill="none">
+              <text x="0" y="22" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#E40000" letter-spacing="-0.5">airtel</text>
+              <path d="M82 16 Q92 4 108 8" stroke="#E40000" stroke-width="2.5" fill="none" stroke-linecap="round" />
+              <circle cx="108" cy="9" r="3.5" fill="#E40000" />
+            </svg>
+          </div>
+
+          <div class="flex-shrink-0 flex items-center justify-center px-8 py-5 rounded-xl bg-white border border-slate-200 hover:border-primary-300 hover:shadow-md transition-all duration-300 hover:scale-105">
+            <svg viewBox="0 0 100 32" class="h-8" fill="none">
+              <rect x="0" y="4" width="28" height="24" rx="4" fill="#0073CF" />
+              <text x="4" y="22" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#fff">E</text>
+              <text x="32" y="22" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#0073CF" letter-spacing="-0.3">ENTEL</text>
+            </svg>
+          </div>
+
+          <div class="flex-shrink-0 flex items-center justify-center px-8 py-5 rounded-xl bg-white border border-slate-200 hover:border-primary-300 hover:shadow-md transition-all duration-300 hover:scale-105">
+            <svg viewBox="0 0 110 32" class="h-8 text-slate-500" fill="none">
+              <circle cx="12" cy="16" r="9" stroke="currentColor" stroke-width="2.5" />
+              <circle cx="12" cy="16" r="3.5" fill="currentColor" />
+              <text x="26" y="22" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="currentColor" letter-spacing="-0.3">Omobio</text>
+            </svg>
+          </div>
+
+          <div class="flex-shrink-0 flex items-center justify-center px-8 py-5 rounded-xl bg-white border border-slate-200 hover:border-primary-300 hover:shadow-md transition-all duration-300 hover:scale-105">
+            <svg viewBox="0 0 125 32" class="h-8" fill="none">
+              <rect x="0" y="4" width="22" height="22" rx="4" fill="#E20074" />
+              <text x="5" y="20" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#fff">T</text>
+              <text x="28" y="22" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#E20074" letter-spacing="-0.3">-Mobile</text>
+            </svg>
+          </div>
+
+          <div class="flex-shrink-0 flex items-center justify-center px-8 py-5 rounded-xl bg-white border border-slate-200 hover:border-primary-300 hover:shadow-md transition-all duration-300 hover:scale-105">
+            <svg viewBox="0 0 195 32" class="h-8" fill="none">
+              <circle cx="14" cy="16" r="11" stroke="#1B49C0" stroke-width="2.5" />
+              <text x="7" y="21" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#1B49C0">T</text>
+              <text x="30" y="22" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#1B49C0" letter-spacing="-0.2">Tata Communications</text>
+            </svg>
+          </div>
+
+          <div class="flex-shrink-0 flex items-center justify-center px-8 py-5 rounded-xl bg-white border border-slate-200 hover:border-primary-300 hover:shadow-md transition-all duration-300 hover:scale-105">
+            <svg viewBox="0 0 105 32" class="h-8 text-slate-500" fill="none">
+              <path d="M3 8 L3 24 M3 14 L14 14 M3 24 L14 24" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
+              <text x="18" y="22" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="currentColor" letter-spacing="-0.3">Telkosh</text>
+            </svg>
+          </div>
+
+          <div class="flex-shrink-0 flex items-center justify-center px-8 py-5 rounded-xl bg-white border border-slate-200 hover:border-primary-300 hover:shadow-md transition-all duration-300 hover:scale-105">
+            <svg viewBox="0 0 115 32" class="h-8 text-slate-500" fill="none">
+              <circle cx="10" cy="16" r="7" stroke="currentColor" stroke-width="2" />
+              <path d="M10 9 L10 23 M3 16 L17 16" stroke="currentColor" stroke-width="1.5" opacity="0.5" />
+              <text x="22" y="22" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="currentColor" letter-spacing="-0.3">Broadnet</text>
+            </svg>
+          </div>
+
+          <!-- ===== Group B (Identical 18 logos for seamless infinite loop) ===== -->
+          <div class="flex-shrink-0 flex items-center justify-center px-8 py-5 rounded-xl bg-white border border-slate-200 hover:border-primary-300 hover:shadow-md transition-all duration-300 hover:scale-105">
+            <svg viewBox="0 0 130 32" class="h-8 text-slate-500 hover:text-slate-700" fill="none">
+              <circle cx="14" cy="16" r="10" stroke="currentColor" stroke-width="2.5" />
+              <text x="30" y="22" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="currentColor" letter-spacing="-0.3">OneXtel</text>
+            </svg>
+          </div>
+
+          <div class="flex-shrink-0 flex items-center justify-center px-8 py-5 rounded-xl bg-white border border-slate-200 hover:border-primary-300 hover:shadow-md transition-all duration-300 hover:scale-105">
+            <svg viewBox="0 0 90 32" class="h-8 text-slate-500 hover:text-slate-700" fill="none">
+              <path d="M5 6 L5 22 L14 22 M5 14 L12 14" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
+              <text x="18" y="22" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="currentColor" letter-spacing="-0.3">Tanla</text>
+            </svg>
+          </div>
+
+          <div class="flex-shrink-0 flex items-center justify-center px-8 py-5 rounded-xl bg-white border border-slate-200 hover:border-primary-300 hover:shadow-md transition-all duration-300 hover:scale-105">
+            <svg viewBox="0 0 115 32" class="h-8" fill="none">
+              <text x="0" y="22" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#E40000" letter-spacing="-0.5">airtel</text>
+              <path d="M82 16 Q92 4 108 8" stroke="#E40000" stroke-width="2.5" fill="none" stroke-linecap="round" />
+              <circle cx="108" cy="9" r="3.5" fill="#E40000" />
+            </svg>
+          </div>
+
+          <div class="flex-shrink-0 flex items-center justify-center px-8 py-5 rounded-xl bg-white border border-slate-200 hover:border-primary-300 hover:shadow-md transition-all duration-300 hover:scale-105">
+            <svg viewBox="0 0 100 32" class="h-8" fill="none">
+              <rect x="0" y="4" width="28" height="24" rx="4" fill="#0073CF" />
+              <text x="4" y="22" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#fff">E</text>
+              <text x="32" y="22" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#0073CF" letter-spacing="-0.3">ENTEL</text>
+            </svg>
+          </div>
+
+          <div class="flex-shrink-0 flex items-center justify-center px-8 py-5 rounded-xl bg-white border border-slate-200 hover:border-primary-300 hover:shadow-md transition-all duration-300 hover:scale-105">
+            <svg viewBox="0 0 110 32" class="h-8 text-slate-500" fill="none">
+              <circle cx="12" cy="16" r="9" stroke="currentColor" stroke-width="2.5" />
+              <circle cx="12" cy="16" r="3.5" fill="currentColor" />
+              <text x="26" y="22" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="currentColor" letter-spacing="-0.3">Omobio</text>
+            </svg>
+          </div>
+
+          <div class="flex-shrink-0 flex items-center justify-center px-8 py-5 rounded-xl bg-white border border-slate-200 hover:border-primary-300 hover:shadow-md transition-all duration-300 hover:scale-105">
+            <svg viewBox="0 0 125 32" class="h-8" fill="none">
+              <rect x="0" y="4" width="22" height="22" rx="4" fill="#E20074" />
+              <text x="5" y="20" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#fff">T</text>
+              <text x="28" y="22" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#E20074" letter-spacing="-0.3">-Mobile</text>
+            </svg>
+          </div>
+
+          <div class="flex-shrink-0 flex items-center justify-center px-8 py-5 rounded-xl bg-white border border-slate-200 hover:border-primary-300 hover:shadow-md transition-all duration-300 hover:scale-105">
+            <svg viewBox="0 0 195 32" class="h-8" fill="none">
+              <circle cx="14" cy="16" r="11" stroke="#1B49C0" stroke-width="2.5" />
+              <text x="7" y="21" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#1B49C0">T</text>
+              <text x="30" y="22" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#1B49C0" letter-spacing="-0.2">Tata Communications</text>
+            </svg>
+          </div>
+
+          <div class="flex-shrink-0 flex items-center justify-center px-8 py-5 rounded-xl bg-white border border-slate-200 hover:border-primary-300 hover:shadow-md transition-all duration-300 hover:scale-105">
+            <svg viewBox="0 0 105 32" class="h-8 text-slate-500" fill="none">
+              <path d="M3 8 L3 24 M3 14 L14 14 M3 24 L14 24" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
+              <text x="18" y="22" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="currentColor" letter-spacing="-0.3">Telkosh</text>
+            </svg>
+          </div>
+
+          <div class="flex-shrink-0 flex items-center justify-center px-8 py-5 rounded-xl bg-white border border-slate-200 hover:border-primary-300 hover:shadow-md transition-all duration-300 hover:scale-105">
+            <svg viewBox="0 0 115 32" class="h-8 text-slate-500" fill="none">
+              <circle cx="10" cy="16" r="7" stroke="currentColor" stroke-width="2" />
+              <path d="M10 9 L10 23 M3 16 L17 16" stroke="currentColor" stroke-width="1.5" opacity="0.5" />
+              <text x="22" y="22" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="currentColor" letter-spacing="-0.3">Broadnet</text>
+            </svg>
+          </div>
+
+          <div class="flex-shrink-0 flex items-center justify-center px-8 py-5 rounded-xl bg-white border border-slate-200 hover:border-primary-300 hover:shadow-md transition-all duration-300 hover:scale-105">
+            <svg viewBox="0 0 130 32" class="h-8 text-slate-500 hover:text-slate-700" fill="none">
+              <circle cx="14" cy="16" r="10" stroke="currentColor" stroke-width="2.5" />
+              <text x="30" y="22" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="currentColor" letter-spacing="-0.3">OneXtel</text>
+            </svg>
+          </div>
+
+          <div class="flex-shrink-0 flex items-center justify-center px-8 py-5 rounded-xl bg-white border border-slate-200 hover:border-primary-300 hover:shadow-md transition-all duration-300 hover:scale-105">
+            <svg viewBox="0 0 90 32" class="h-8 text-slate-500 hover:text-slate-700" fill="none">
+              <path d="M5 6 L5 22 L14 22 M5 14 L12 14" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
+              <text x="18" y="22" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="currentColor" letter-spacing="-0.3">Tanla</text>
+            </svg>
+          </div>
+
+          <div class="flex-shrink-0 flex items-center justify-center px-8 py-5 rounded-xl bg-white border border-slate-200 hover:border-primary-300 hover:shadow-md transition-all duration-300 hover:scale-105">
+            <svg viewBox="0 0 115 32" class="h-8" fill="none">
+              <text x="0" y="22" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#E40000" letter-spacing="-0.5">airtel</text>
+              <path d="M82 16 Q92 4 108 8" stroke="#E40000" stroke-width="2.5" fill="none" stroke-linecap="round" />
+              <circle cx="108" cy="9" r="3.5" fill="#E40000" />
+            </svg>
+          </div>
+
+          <div class="flex-shrink-0 flex items-center justify-center px-8 py-5 rounded-xl bg-white border border-slate-200 hover:border-primary-300 hover:shadow-md transition-all duration-300 hover:scale-105">
+            <svg viewBox="0 0 100 32" class="h-8" fill="none">
+              <rect x="0" y="4" width="28" height="24" rx="4" fill="#0073CF" />
+              <text x="4" y="22" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#fff">E</text>
+              <text x="32" y="22" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#0073CF" letter-spacing="-0.3">ENTEL</text>
+            </svg>
+          </div>
+
+          <div class="flex-shrink-0 flex items-center justify-center px-8 py-5 rounded-xl bg-white border border-slate-200 hover:border-primary-300 hover:shadow-md transition-all duration-300 hover:scale-105">
+            <svg viewBox="0 0 110 32" class="h-8 text-slate-500" fill="none">
+              <circle cx="12" cy="16" r="9" stroke="currentColor" stroke-width="2.5" />
+              <circle cx="12" cy="16" r="3.5" fill="currentColor" />
+              <text x="26" y="22" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="currentColor" letter-spacing="-0.3">Omobio</text>
+            </svg>
+          </div>
+
+          <div class="flex-shrink-0 flex items-center justify-center px-8 py-5 rounded-xl bg-white border border-slate-200 hover:border-primary-300 hover:shadow-md transition-all duration-300 hover:scale-105">
+            <svg viewBox="0 0 125 32" class="h-8" fill="none">
+              <rect x="0" y="4" width="22" height="22" rx="4" fill="#E20074" />
+              <text x="5" y="20" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#fff">T</text>
+              <text x="28" y="22" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#E20074" letter-spacing="-0.3">-Mobile</text>
+            </svg>
+          </div>
+
+          <div class="flex-shrink-0 flex items-center justify-center px-8 py-5 rounded-xl bg-white border border-slate-200 hover:border-primary-300 hover:shadow-md transition-all duration-300 hover:scale-105">
+            <svg viewBox="0 0 195 32" class="h-8" fill="none">
+              <circle cx="14" cy="16" r="11" stroke="#1B49C0" stroke-width="2.5" />
+              <text x="7" y="21" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#1B49C0">T</text>
+              <text x="30" y="22" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#1B49C0" letter-spacing="-0.2">Tata Communications</text>
+            </svg>
+          </div>
+
+          <div class="flex-shrink-0 flex items-center justify-center px-8 py-5 rounded-xl bg-white border border-slate-200 hover:border-primary-300 hover:shadow-md transition-all duration-300 hover:scale-105">
+            <svg viewBox="0 0 105 32" class="h-8 text-slate-500" fill="none">
+              <path d="M3 8 L3 24 M3 14 L14 14 M3 24 L14 24" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
+              <text x="18" y="22" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="currentColor" letter-spacing="-0.3">Telkosh</text>
+            </svg>
+          </div>
+
+          <div class="flex-shrink-0 flex items-center justify-center px-8 py-5 rounded-xl bg-white border border-slate-200 hover:border-primary-300 hover:shadow-md transition-all duration-300 hover:scale-105">
+            <svg viewBox="0 0 115 32" class="h-8 text-slate-500" fill="none">
+              <circle cx="10" cy="16" r="7" stroke="currentColor" stroke-width="2" />
+              <path d="M10 9 L10 23 M3 16 L17 16" stroke="currentColor" stroke-width="1.5" opacity="0.5" />
+              <text x="22" y="22" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="currentColor" letter-spacing="-0.3">Broadnet</text>
+            </svg>
+          </div>
+        </div>
+        <div class="absolute inset-y-0 left-0 w-20 sm:w-32 bg-gradient-to-r from-white to-transparent pointer-events-none z-10"></div>
+        <div class="absolute inset-y-0 right-0 w-20 sm:w-32 bg-gradient-to-l from-white to-transparent pointer-events-none z-10"></div>
+      </div>
+    </section>
+
+    <!-- ==================== FAQ SECTION ==================== -->
+    <section id="faq" class="relative py-24 lg:py-32 bg-slate-50">
+      <div class="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16 reveal">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent-100 border border-accent-200 mb-4">
+            <svg class="w-4 h-4 text-accent-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+            <p class="text-sm font-semibold text-accent-600 uppercase tracking-wider">FAQ</p>
+          </div>
+          <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mb-4">
+            Frequently Asked Questions
+          </h2>
+          <p class="text-lg text-slate-500">Everything you need to know about TeleAspiresPvtLTD</p>
+        </div>
+
+        <div class="space-y-4" id="faqAccordion">
+          <div class="reveal bg-white rounded-xl overflow-hidden border border-slate-200 transition-all duration-300">
+            <button class="w-full flex items-center justify-between gap-4 px-6 py-5 text-left faq-btn">
+              <span class="font-display text-base lg:text-lg font-semibold text-slate-800">What is A2P SMS?</span>
+              <div class="flex-shrink-0 w-8 h-8 rounded-lg flex items-center justify-center bg-slate-100 faq-icon transition-all duration-300">
+                <svg class="w-4 h-4 text-slate-400 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+              </div>
+            </button>
+            <div class="faq-content hidden px-6 pb-5 text-slate-500 text-sm leading-relaxed border-t border-slate-50 pt-3">
+              Application-to-Person (A2P) SMS enables businesses to send automated, high-volume messages for marketing, alerts, OTP/2FA, appointment reminders, and notifications. Unlike P2P messaging, A2P is designed for scale and automation, making it ideal for enterprise communication.
+            </div>
+          </div>
+
+          <div class="reveal bg-white rounded-xl overflow-hidden border border-slate-200 transition-all duration-300">
+            <button class="w-full flex items-center justify-between gap-4 px-6 py-5 text-left faq-btn">
+              <span class="font-display text-base lg:text-lg font-semibold text-slate-800">Is my data secure?</span>
+              <div class="flex-shrink-0 w-8 h-8 rounded-lg flex items-center justify-center bg-slate-100 faq-icon transition-all duration-300">
+                <svg class="w-4 h-4 text-slate-400 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+              </div>
+            </button>
+            <div class="faq-content hidden px-6 pb-5 text-slate-500 text-sm leading-relaxed border-t border-slate-50 pt-3">
+              Yes! We use enterprise-grade encryption (TLS 1.3 in transit, AES-256 at rest), comply with GDPR, and follow strict security protocols. Our infrastructure is SOC 2 Type II certified with full audit logging and 24/7 monitoring.
+            </div>
+          </div>
+
+          <div class="reveal bg-white rounded-xl overflow-hidden border border-slate-200 transition-all duration-300">
+            <button class="w-full flex items-center justify-between gap-4 px-6 py-5 text-left faq-btn">
+              <span class="font-display text-base lg:text-lg font-semibold text-slate-800">How fast is delivery?</span>
+              <div class="flex-shrink-0 w-8 h-8 rounded-lg flex items-center justify-center bg-slate-100 faq-icon transition-all duration-300">
+                <svg class="w-4 h-4 text-slate-400 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+              </div>
+            </button>
+            <div class="faq-content hidden px-6 pb-5 text-slate-500 text-sm leading-relaxed border-t border-slate-50 pt-3">
+              99.9% of messages are delivered within 5 seconds globally. Our direct carrier connections and intelligent routing engine ensure maximum deliverability with sub-second latency on most routes.
+            </div>
+          </div>
+
+          <div class="reveal bg-white rounded-xl overflow-hidden border border-slate-200 transition-all duration-300">
+            <button class="w-full flex items-center justify-between gap-4 px-6 py-5 text-left faq-btn">
+              <span class="font-display text-base lg:text-lg font-semibold text-slate-800">Which countries do you support?</span>
+              <div class="flex-shrink-0 w-8 h-8 rounded-lg flex items-center justify-center bg-slate-100 faq-icon transition-all duration-300">
+                <svg class="w-4 h-4 text-slate-400 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+              </div>
+            </button>
+            <div class="faq-content hidden px-6 pb-5 text-slate-500 text-sm leading-relaxed border-t border-slate-50 pt-3">
+              TeleAspiresPvtLTD supports SMS delivery to 200+ countries and territories with local number support, direct carrier connections, and compliance with regional regulations like TCPA (US), GDPR (EU), and DLT (India).
+            </div>
+          </div>
+
+          <div class="reveal bg-white rounded-xl overflow-hidden border border-slate-200 transition-all duration-300">
+            <button class="w-full flex items-center justify-between gap-4 px-6 py-5 text-left faq-btn">
+              <span class="font-display text-base lg:text-lg font-semibold text-slate-800">Can I integrate TeleAspiresPvtLTD with my existing tools?</span>
+              <div class="flex-shrink-0 w-8 h-8 rounded-lg flex items-center justify-center bg-slate-100 faq-icon transition-all duration-300">
+                <svg class="w-4 h-4 text-slate-400 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+              </div>
+            </button>
+            <div class="faq-content hidden px-6 pb-5 text-slate-500 text-sm leading-relaxed border-t border-slate-50 pt-3">
+              Absolutely. We offer a REST API, webhooks, and 50+ platform integrations including Salesforce, HubSpot, Zapier, Shopify, and more. Our developer documentation makes integration straightforward.
+            </div>
+          </div>
+
+          <div class="reveal bg-white rounded-xl overflow-hidden border border-slate-200 transition-all duration-300">
+            <button class="w-full flex items-center justify-between gap-4 px-6 py-5 text-left faq-btn">
+              <span class="font-display text-base lg:text-lg font-semibold text-slate-800">Do you offer volume pricing?</span>
+              <div class="flex-shrink-0 w-8 h-8 rounded-lg flex items-center justify-center bg-slate-100 faq-icon transition-all duration-300">
+                <svg class="w-4 h-4 text-slate-400 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+              </div>
+            </button>
+            <div class="faq-content hidden px-6 pb-5 text-slate-500 text-sm leading-relaxed border-t border-slate-50 pt-3">
+              Yes! We offer flexible pricing tiers based on volume. The more you send, the lower your per-message cost. Contact our sales team for custom enterprise pricing with dedicated infrastructure and SLAs.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CTA SECTION ==================== -->
+    <section class="relative py-24 lg:py-32 bg-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="reveal relative overflow-hidden rounded-3xl shadow-2xl">
+          <div class="absolute inset-0">
+            <img
+              src="https://images.pexels.com/photos/36713443/pexels-photo-36713443.jpeg?auto=compress&cs=tinysrgb&h=700&w=1600"
+              alt="Office at night"
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
+            <div class="absolute inset-0 bg-gradient-to-r from-primary-950/95 via-primary-950/85 to-primary-950/60"></div>
+          </div>
+
+          <div class="absolute -top-32 -right-32 w-64 h-64 bg-primary-500/20 rounded-full blur-[100px] animate-pulse"></div>
+          <div class="absolute -bottom-32 -left-32 w-64 h-64 bg-accent-500/20 rounded-full blur-[100px] animate-pulse" style="animation-delay: 1s;"></div>
+
+          <div class="relative p-10 lg:p-16">
+            <div class="max-w-xl">
+              <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/20 mb-6">
+                <svg class="w-4 h-4 text-accent-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" /></svg>
+                <span class="text-sm text-white/90 font-medium">No credit card required</span>
+              </div>
+              <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight">
+                Ready to transform your <br />
+                <span class="text-gradient">messaging?</span>
+              </h2>
+              <p class="text-lg text-white/70 mb-8 leading-relaxed">
+                Join 10,000+ businesses using TeleAspiresPvtLTD to send millions of messages daily.
+                Get started in minutes — no credit card required.
+              </p>
+              <div class="flex flex-col sm:flex-row gap-4">
+                <button
+                  onclick="openAuth('signup')"
+                  class="group inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-semibold text-white bg-gradient-to-r from-primary-500 to-accent-500 rounded-xl hover:shadow-xl hover:shadow-primary-500/40 hover:scale-[1.03] transition-all"
+                >
+                  Get Started Free
+                  <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+                </button>
+                <a
+                  href="#services"
+                  class="inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-semibold text-white bg-white/10 border border-white/20 rounded-xl hover:bg-white/20 transition-all"
+                >
+                  View Services
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer id="contact" class="relative border-t border-slate-200 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
+      
+      <!-- 1. Main 4-Column Footer Grid (Product, Company, Support, Contact Us) -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-12 pb-12">
+        <!-- Column 1: Product -->
+        <div>
+          <h4 class="text-base font-bold text-slate-800 mb-5">Product</h4>
+          <ul class="space-y-3.5">
+            <li><a href="#features" class="text-sm text-slate-500 hover:text-primary-600 transition-colors">Features</a></li>
+            <li><a href="#services" class="text-sm text-slate-500 hover:text-primary-600 transition-colors">Services</a></li>
+            <li><a href="javascript:void(0)" onclick="openQuoteModal()" class="text-sm text-slate-500 hover:text-primary-600 transition-colors">Pricing</a></li>
+            <li><a href="#features" class="text-sm text-slate-500 hover:text-primary-600 transition-colors">API Docs</a></li>
+            <li><a href="#features" class="text-sm text-slate-500 hover:text-primary-600 transition-colors">Integrations</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 2: Company -->
+        <div>
+          <h4 class="text-base font-bold text-slate-800 mb-5">Company</h4>
+          <ul class="space-y-3.5">
+            <li><a href="#platform" class="text-sm text-slate-500 hover:text-primary-600 transition-colors">About Us</a></li>
+            <li><a href="javascript:void(0)" onclick="openQuoteModal()" class="text-sm text-slate-500 hover:text-primary-600 transition-colors">Careers</a></li>
+            <li><a href="#testimonials" class="text-sm text-slate-500 hover:text-primary-600 transition-colors">Blog</a></li>
+            <li><a href="#platform" class="text-sm text-slate-500 hover:text-primary-600 transition-colors">Press Kit</a></li>
+            <li><a href="#partners" class="text-sm text-slate-500 hover:text-primary-600 transition-colors">Partners</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Support -->
+        <div>
+          <h4 class="text-base font-bold text-slate-800 mb-5">Support</h4>
+          <ul class="space-y-3.5">
+            <li><a href="#faq" class="text-sm text-slate-500 hover:text-primary-600 transition-colors">Help Center</a></li>
+            <li><a href="javascript:void(0)" onclick="openQuoteModal()" class="text-sm text-slate-500 hover:text-primary-600 transition-colors">Contact Us</a></li>
+            <li><a href="#platform" class="text-sm text-slate-500 hover:text-primary-600 transition-colors">Status</a></li>
+            <li><a href="#testimonials" class="text-sm text-slate-500 hover:text-primary-600 transition-colors">Community</a></li>
+            <li><a href="#features" class="text-sm text-slate-500 hover:text-primary-600 transition-colors">Developer Hub</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Contact Us -->
+        <div class="col-span-2 md:col-span-1 space-y-5">
+          <h4 class="text-base font-bold text-slate-800 mb-5">Contact Us</h4>
+          
+          <!-- Location -->
+          <div class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-[#00a6d6] flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+            <div class="text-sm leading-snug">
+              <p class="font-medium text-slate-700">TeleAspiresPvtLTD</p>
+              <p class="text-slate-500 text-xs mt-1">Enterprise messaging solutions</p>
+              <p class="text-slate-400 text-xs mt-0.5">Built for reliable communication at scale</p>
+            </div>
+          </div>
+
+          <!-- Email -->
+          <div class="flex items-center gap-3 pt-1">
+            <svg class="w-5 h-5 text-[#00a6d6] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+            <a href="mailto:info@teleaspires.com" class="text-sm text-slate-600 hover:text-[#00a6d6] transition-colors">
+              info@teleaspires.com
+            </a>
+          </div>
+
+          <!-- Phone -->
+          <div class="flex items-center gap-3 pt-1">
+            <svg class="w-5 h-5 text-[#00a6d6] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+            </svg>
+            <a href="tel:+447861675552" class="text-sm text-slate-600 hover:text-[#00a6d6] transition-colors">
+              +44 7861 675552
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. Brand & Stay Updated Newsletter Banner (Moved Below as Requested) -->
+      <div class="grid lg:grid-cols-12 gap-8 items-center pt-10 border-t border-slate-100">
+        <div class="lg:col-span-6">
+          <a href="#" class="inline-flex items-center mb-4">
+            <img
+              src="./Tele_Aspires_Broadcast_Logo.png"
+              alt="TeleAspiresPvtLTD"
+              class="h-12 w-auto max-w-[240px] object-contain"
+              onerror="this.onerror=null; this.src='./public/Tele_Aspires_Broadcast_Logo.png';"
+            />
+          </a>
+          <p class="text-sm text-slate-500 leading-relaxed max-w-md">
+            Next-generation messaging solutions for businesses that need reliable communication at scale.
+            Send SMS, WhatsApp, and voice messages seamlessly worldwide.
+          </p>
+        </div>
+        <div class="lg:col-span-6">
+          <p class="text-sm font-semibold text-slate-800 mb-1">Stay Updated</p>
+          <p class="text-xs text-slate-400 mb-3">Get the latest SMS routes, industry news and exclusive volume offers</p>
+          <div id="newsletterSuccess" class="hidden flex items-center gap-2.5 px-4 py-3 rounded-xl bg-accent-50 border border-accent-200 mb-3">
+            <svg class="w-5 h-5 text-accent-600 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+            <p class="text-sm text-accent-700">You&rsquo;re subscribed! Welcome aboard.</p>
+          </div>
+          <form id="newsletterForm" onsubmit="handleNewsletter(event)" class="flex gap-2">
+            <input
+              type="email"
+              id="newsletterEmail"
+              required
+              placeholder="Enter your email"
+              class="flex-1 px-4 py-2.5 text-sm text-slate-700 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:border-primary-400 focus:bg-white transition-all placeholder:text-slate-400"
+            />
+            <button
+              type="submit"
+              class="px-5 py-2.5 text-white bg-gradient-to-r from-primary-500 to-accent-500 rounded-xl hover:shadow-lg hover:shadow-primary-500/20 transition-all font-semibold text-sm whitespace-nowrap"
+            >
+              Subscribe
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- 3. Bottom Legal Row -->
+      <div class="mt-12 pt-8 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p class="text-xs text-slate-400">
+          &copy; 2026 TeleAspiresPvtLTD. All rights reserved.
+        </p>
+        <div class="flex items-center gap-6">
+          <a href="#" class="text-xs text-slate-400 hover:text-slate-600 transition-colors">Privacy Policy</a>
+          <a href="#" class="text-xs text-slate-400 hover:text-slate-600 transition-colors">Terms of Service</a>
+          <a href="#" class="text-xs text-slate-400 hover:text-slate-600 transition-colors">Security</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== AUTH MODAL ==================== -->
+  <div id="authModal" class="hidden fixed inset-0 z-[100] flex items-center justify-center p-4">
+    <div class="absolute inset-0 bg-slate-900/60 backdrop-blur-sm" onclick="closeAuth()"></div>
+
+    <div class="relative w-full max-w-md bg-white border border-slate-200 rounded-2xl p-8 shadow-2xl z-10 animate-fade-up">
+      <button
+        type="button"
+        onclick="closeAuth()"
+        class="absolute top-4 right-4 p-1.5 text-slate-400 hover:text-slate-600 transition-colors"
+        aria-label="Close"
+      >
+        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+
+      <div class="flex items-center mb-6">
+        <img
+          src="./Tele_Aspires_Broadcast_Logo.png"
+          alt="TeleAspiresPvtLTD"
+          class="h-12 w-auto max-w-[200px] object-contain"
+          onerror="this.onerror=null; this.src='./public/Tele_Aspires_Broadcast_Logo.png';"
+        />
+      </div>
+
+      <div class="flex rounded-xl bg-slate-100 p-1 mb-6">
+        <button
+          id="signInTabBtn"
+          onclick="setAuthMode('signin')"
+          class="flex-1 py-2 text-sm font-semibold rounded-lg bg-white text-slate-900 shadow-sm transition-all"
+        >
+          Sign In
+        </button>
+        <button
+          id="signUpTabBtn"
+          onclick="setAuthMode('signup')"
+          class="flex-1 py-2 text-sm font-semibold rounded-lg text-slate-500 hover:text-slate-900 transition-all"
+        >
+          Sign Up
+        </button>
+      </div>
+
+      <div id="authNotice" class="hidden mb-4 p-3 rounded-xl bg-accent-50 border border-accent-200 text-xs text-accent-700"></div>
+
+      <form onsubmit="handleAuthSubmit(event)" class="space-y-4">
+        <div>
+          <label class="block text-xs font-semibold text-slate-700 mb-1.5">Email address</label>
+          <div class="relative">
+            <input
+              type="email"
+              id="authEmail"
+              required
+              placeholder="you@company.com"
+              class="w-full pl-10 pr-4 py-2.5 text-sm bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:outline-none focus:border-primary-400 transition-all"
+            />
+            <svg class="w-5 h-5 text-slate-400 absolute left-3 top-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207" /></svg>
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-semibold text-slate-700 mb-1.5">Password</label>
+          <div class="relative">
+            <input
+              type="password"
+              id="authPassword"
+              required
+              placeholder="••••••••"
+              class="w-full pl-10 pr-4 py-2.5 text-sm bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:outline-none focus:border-primary-400 transition-all"
+            />
+            <svg class="w-5 h-5 text-slate-400 absolute left-3 top-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" /></svg>
+          </div>
+        </div>
+
+        <button
+          type="submit"
+          id="authSubmitBtn"
+          class="w-full py-3 text-sm font-semibold text-white bg-gradient-to-r from-primary-500 to-accent-500 rounded-xl hover:shadow-lg hover:shadow-primary-500/25 transition-all mt-2"
+        >
+          Sign In
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ==================== JAVASCRIPT ==================== -->
+  <script>
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 24) {
+        navbar.classList.add('bg-white/95', 'shadow-md', 'border-slate-200');
+        navbar.classList.remove('bg-white/80', 'border-slate-100');
+      } else {
+        navbar.classList.remove('bg-white/95', 'shadow-md', 'border-slate-200');
+        navbar.classList.add('bg-white/80', 'border-slate-100');
+      }
+    });
+
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobileMenu');
+      const hamburger = document.getElementById('hamburgerIcon');
+      const close = document.getElementById('closeIcon');
+      const isHidden = menu.classList.contains('hidden');
+      if (isHidden) {
+        menu.classList.remove('hidden');
+        hamburger.classList.add('hidden');
+        close.classList.remove('hidden');
+      } else {
+        menu.classList.add('hidden');
+        hamburger.classList.remove('hidden');
+        close.classList.add('hidden');
+      }
+    }
+
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+
+    document.querySelectorAll('.reveal').forEach((el) => revealObserver.observe(el));
+
+    let statsAnimated = false;
+    const statsSection = document.getElementById('statsSection');
+    const statsObserver = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting && !statsAnimated) {
+        statsAnimated = true;
+        document.querySelectorAll('.stat-counter').forEach((counter) => {
+          const target = parseFloat(counter.getAttribute('data-target'));
+          const decimals = parseInt(counter.getAttribute('data-decimals') || '0');
+          const suffix = counter.getAttribute('data-suffix') || '';
+          const duration = 1600;
+          const start = performance.now();
+
+          function update(now) {
+            const progress = Math.min((now - start) / duration, 1);
+            const eased = 1 - Math.pow(1 - progress, 3);
+            const current = target * eased;
+            counter.textContent = (decimals > 0 ? current.toFixed(decimals) : Math.round(current)) + suffix;
+            if (progress < 1) requestAnimationFrame(update);
+          }
+          requestAnimationFrame(update);
+        });
+      }
+    }, { threshold: 0.3 });
+    if (statsSection) statsObserver.observe(statsSection);
+
+    function updateCharCount() {
+      const textarea = document.getElementById('composerInput');
+      const counter = document.getElementById('charCounter');
+      const seg = document.getElementById('segmentCount');
+      const len = textarea.value.length;
+      const segments = Math.ceil(len / 160) || 1;
+      counter.textContent = `${len} / 160 chars`;
+      seg.textContent = `SMS · ${segments} segment${segments > 1 ? 's' : ''}`;
+    }
+
+    function setComposerMessage(msg) {
+      const textarea = document.getElementById('composerInput');
+      textarea.value = msg;
+      updateCharCount();
+      textarea.focus();
+    }
+
+    function handleSendMessage() {
+      const btn = document.getElementById('sendBtn');
+      const card = document.getElementById('deliveryCard');
+      const status = document.getElementById('deliveryStatus');
+      const time = document.getElementById('deliveryTimestamp');
+
+      btn.disabled = true;
+      btn.innerHTML = '<span>Sending message...</span>';
+
+      setTimeout(() => {
+        btn.disabled = false;
+        btn.innerHTML = '<span>Send Message</span><svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" /></svg>';
+        status.textContent = 'Message Delivered!';
+        time.textContent = 'Delivered just now · 0.8s round-trip';
+        card.classList.add('ring-2', 'ring-accent-400');
+        setTimeout(() => card.classList.remove('ring-2', 'ring-accent-400'), 2000);
+      }, 900);
+    }
+
+    document.querySelectorAll('.faq-btn').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const item = btn.parentElement;
+        const content = item.querySelector('.faq-content');
+        const icon = item.querySelector('.faq-icon svg');
+        const isOpen = !content.classList.contains('hidden');
+
+        document.querySelectorAll('.faq-content').forEach((c) => c.classList.add('hidden'));
+        document.querySelectorAll('.faq-icon svg').forEach((i) => i.classList.remove('rotate-180'));
+        document.querySelectorAll('#faqAccordion > div').forEach((d) => d.classList.remove('border-primary-300', 'shadow-md'));
+
+        if (!isOpen) {
+          content.classList.remove('hidden');
+          icon.classList.add('rotate-180');
+          item.classList.add('border-primary-300', 'shadow-md');
+        }
+      });
+    });
+
+    async function handleNewsletter(e) {
+      e.preventDefault();
+      const email = document.getElementById('newsletterEmail').value;
+      if (!email) return;
+
+      try {
+        fetch('https://formsubmit.co/ajax/info@teleaspires.com', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify({ email: email, _subject: 'New Newsletter Subscriber: ' + email })
+        });
+      } catch (err) {}
+
+      document.getElementById('newsletterForm').classList.add('hidden');
+      document.getElementById('newsletterSuccess').classList.remove('hidden');
+    }
+
+    let currentAuthMode = 'signin';
+
+    function openAuth(mode = 'signin') {
+      currentAuthMode = mode;
+      setAuthMode(mode);
+      document.getElementById('authModal').classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeAuth() {
+      document.getElementById('authModal').classList.add('hidden');
+      document.body.style.overflow = '';
+      document.getElementById('authNotice').classList.add('hidden');
+    }
+
+    function setAuthMode(mode) {
+      currentAuthMode = mode;
+      const inTab = document.getElementById('signInTabBtn');
+      const upTab = document.getElementById('signUpTabBtn');
+      const submitBtn = document.getElementById('authSubmitBtn');
+      if (mode === 'signin') {
+        inTab.className = 'flex-1 py-2 text-sm font-semibold rounded-lg bg-white text-slate-900 shadow-sm transition-all';
+        upTab.className = 'flex-1 py-2 text-sm font-semibold rounded-lg text-slate-500 hover:text-slate-900 transition-all';
+        submitBtn.textContent = 'Sign In';
+      } else {
+        upTab.className = 'flex-1 py-2 text-sm font-semibold rounded-lg bg-white text-slate-900 shadow-sm transition-all';
+        inTab.className = 'flex-1 py-2 text-sm font-semibold rounded-lg text-slate-500 hover:text-slate-900 transition-all';
+        submitBtn.textContent = 'Create Account';
+      }
+    }
+
+    function handleAuthSubmit(e) {
+      e.preventDefault();
+      const email = document.getElementById('authEmail').value;
+      const notice = document.getElementById('authNotice');
+      notice.classList.remove('hidden');
+      notice.textContent = currentAuthMode === 'signin' ? `Welcome back! Signed in as ${email}.` : `Account created! Confirmation sent to ${email}.`;
+
+      setTimeout(() => {
+        closeAuth();
+        const authSection = document.getElementById('authSection');
+        authSection.innerHTML = `
+          <div class="flex items-center gap-2 px-3 py-1.5 rounded-xl border border-slate-200 bg-white">
+            <div class="w-7 h-7 rounded-lg bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center text-white text-xs font-semibold">
+              ${email.charAt(0).toUpperCase()}
+            </div>
+            <span class="text-sm font-medium text-slate-700 max-w-[140px] truncate">${email}</span>
+          </div>
+        `;
+      }, 1000);
+    }
+
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeAuth();
+    });
+  </script>
+  <!-- ==================== FLOATING WHATSAPP CHAT BUTTON ==================== -->
+  <div id="whatsappWidget" class="fixed bottom-6 right-6 z-50 flex items-center group">
+    <!-- Hover Tooltip -->
+    <div class="mr-3 px-3.5 py-1.5 rounded-xl bg-slate-900 text-white text-xs font-medium shadow-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none hidden sm:block whitespace-nowrap">
+      Chat with us on WhatsApp 👋
+    </div>
+    <!-- Floating Button -->
+    <a
+      id="whatsappLink"
+      href="https://wa.me/447861675552?text=Hello%20TeleAspires%20Team,%20I%20am%20interested%20in%20your%20SMS%20and%20messaging%20services."
+      target="_blank"
+      rel="noopener noreferrer"
+      class="relative flex items-center justify-center w-14 h-14 rounded-full bg-[#25D366] text-white shadow-2xl hover:scale-110 hover:shadow-emerald-500/50 transition-all duration-300"
+      aria-label="Chat on WhatsApp"
+    >
+      <span class="absolute -top-1 -right-1 flex h-4 w-4">
+        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+        <span class="relative inline-flex rounded-full h-4 w-4 bg-emerald-500 border-2 border-white"></span>
+      </span>
+      <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24">
+        <path d="M12.031 2C6.495 2 2 6.495 2 12.031c0 1.838.497 3.633 1.442 5.216L2 22l4.908-1.411a10.02 10.02 0 005.123 1.442c5.536 0 10.031-4.495 10.031-10.031C22.062 6.495 17.567 2 12.031 2zm5.82 14.288c-.244.686-1.42 1.309-1.96 1.38-.508.067-1.164.095-3.376-.82-2.825-1.17-4.646-4.043-4.787-4.23-.141-.188-1.144-1.523-1.144-2.906 0-1.383.725-2.063.98-2.344.256-.281.562-.352.75-.352.188 0 .375.002.539.01.173.01.403-.066.63.479.244.586.829 2.02.9 2.164.07.144.117.313.023.5-.094.188-.141.305-.281.469-.141.164-.298.366-.425.492-.141.141-.289.294-.124.577.164.281.732 1.205 1.572 1.953 1.08 0.963 1.99 1.262 2.272 1.403.281.141.447.117.611-.07.164-.188.705-.82.893-1.102.188-.281.375-.235.63-.141.256.094 1.623.766 1.904.906.281.141.469.211.539.328.07.117.07.68-.174 1.366z"/>
+      </svg>
+    </a>
+  </div>
+
+  <!-- ==================== LEAD CAPTURE / GET A QUOTE MODAL ==================== -->
+  <div id="quoteModal" class="hidden fixed inset-0 z-[100] flex items-center justify-center p-4">
+    <div class="absolute inset-0 bg-slate-900/60 backdrop-blur-sm" onclick="closeQuoteModal()"></div>
+
+    <div class="relative w-full max-w-lg bg-white border border-slate-200 rounded-2xl p-8 shadow-2xl z-10 animate-fade-up max-h-[90vh] overflow-y-auto">
+      <button
+        type="button"
+        onclick="closeQuoteModal()"
+        class="absolute top-4 right-4 p-1.5 text-slate-400 hover:text-slate-600 transition-colors"
+        aria-label="Close"
+      >
+        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+
+      <div class="mb-5">
+        <span class="inline-block px-3 py-1 rounded-full bg-primary-100 text-primary-700 font-semibold text-xs uppercase tracking-wider mb-2">Enterprise Enquiry</span>
+        <h3 class="font-display text-2xl font-bold text-slate-900">Request Custom Pricing</h3>
+        <p class="text-sm text-slate-500 mt-1">Fill in your requirements and our team will get back to you within 30 minutes.</p>
+      </div>
+
+      <div id="quoteSuccess" class="hidden p-4 mb-4 rounded-xl bg-accent-50 border border-accent-200 text-sm text-accent-800">
+        🎉 Thank you! Your request has been received. Our sales team will contact you shortly.
+      </div>
+
+      <form id="quoteForm" onsubmit="handleQuoteSubmit(event)" class="space-y-4">
+        <div>
+          <label class="block text-xs font-semibold text-slate-700 mb-1">Full Name *</label>
+          <input
+            type="text"
+            required
+            id="quoteName"
+            placeholder="John Doe"
+            class="w-full px-4 py-2.5 text-sm bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:outline-none focus:border-primary-400 transition-all"
+          />
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-semibold text-slate-700 mb-1">Work Email *</label>
+            <input
+              type="email"
+              required
+              id="quoteEmail"
+              placeholder="john@company.com"
+              class="w-full px-4 py-2.5 text-sm bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:outline-none focus:border-primary-400 transition-all"
+            />
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-slate-700 mb-1">Phone Number *</label>
+            <input
+              type="tel"
+              required
+              id="quotePhone"
+              placeholder="+91 98765 43210"
+              class="w-full px-4 py-2.5 text-sm bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:outline-none focus:border-primary-400 transition-all"
+            />
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-semibold text-slate-700 mb-1">Estimated Monthly SMS Volume</label>
+          <select
+            id="quoteVolume"
+            class="w-full px-4 py-2.5 text-sm bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:outline-none focus:border-primary-400 transition-all text-slate-700"
+          >
+            <option value="Under 50,000">Under 50,000 messages / month</option>
+            <option value="50,000 - 250,000">50,000 - 250,000 messages / month</option>
+            <option value="250,000 - 1,000,000">250,000 - 1,000,000 messages / month</option>
+            <option value="1,000,000+">1,000,000+ messages (Enterprise Tier)</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block text-xs font-semibold text-slate-700 mb-1">Your Requirements / Message</label>
+          <textarea
+            id="quoteMessage"
+            rows="3"
+            placeholder="Tell us about your use case (OTP, Promotional, WhatsApp API, etc.)..."
+            class="w-full px-4 py-2.5 text-sm bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:outline-none focus:border-primary-400 transition-all resize-none"
+          ></textarea>
+        </div>
+
+        <button
+          type="submit"
+          id="quoteSubmitBtn"
+          class="w-full py-3.5 text-sm font-semibold text-white bg-gradient-to-r from-primary-500 to-accent-500 rounded-xl hover:shadow-xl hover:shadow-primary-500/30 transition-all mt-2"
+        >
+          Submit Quote Request
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    function openQuoteModal() {
+      document.getElementById('quoteModal').classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeQuoteModal() {
+      document.getElementById('quoteModal').classList.add('hidden');
+      document.body.style.overflow = '';
+    }
+
+    async function handleQuoteSubmit(e) {
+      e.preventDefault();
+      const btn = document.getElementById('quoteSubmitBtn');
+      btn.disabled = true;
+      btn.textContent = 'Submitting...';
+
+      const payload = {
+        name: document.getElementById('quoteName').value,
+        email: document.getElementById('quoteEmail').value,
+        phone: document.getElementById('quotePhone').value,
+        monthly_volume: document.getElementById('quoteVolume').value,
+        message: document.getElementById('quoteMessage').value,
+        _subject: 'New TeleAspires Quote Request from ' + document.getElementById('quoteName').value,
+      };
+
+      try {
+        await fetch('https://formsubmit.co/ajax/info@teleaspires.com', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+      } catch (err) {
+        // Fallback gracefully
+      }
+
+      document.getElementById('quoteForm').classList.add('hidden');
+      document.getElementById('quoteSuccess').classList.remove('hidden');
+      btn.disabled = false;
+      btn.textContent = 'Submit Quote Request';
+    }
+  </script>
+</body>
+</html>
